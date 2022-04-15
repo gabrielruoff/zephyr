@@ -1,4 +1,5 @@
-persistent/services/ganache/
+persistent/services/ganache/data/
+persistent/services/ganache/keys/
 persistent/services/ledger/data/
 venv/
 datagrip/
