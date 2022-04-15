@@ -3,7 +3,6 @@ import logging
 import os
 import sys
 import time
-
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -21,6 +20,13 @@ class initexit:
         # uninitialized
         self.dependencies = {}
 
+    def __enter__(self):
+        self.__init__()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
     def import_dependencies(self):
         logging.debug('Importing dependencies')
         # read dependencies
@@ -35,7 +41,7 @@ class initexit:
         for i, s in enumerate(self.dependencies['services']):
             sys.modules[s] = _modules[i]
 
-    def init(self):
+    def init(self, check=True):
         logging.debug('Running init')
         if not self.dependencies:
             raise Warning('Trying to init without import dependencies')
@@ -46,8 +52,10 @@ class initexit:
             with getattr(_module, service)() as s:
                 s.start()
         logging.debug('Init OK')
+        if check:
+            self._init_check()
 
-    def init_check(self):
+    def _init_check(self):
         # check services have been started
         logging.debug('Running init check')
         for service in self.dependencies['services']:
@@ -57,7 +65,7 @@ class initexit:
                     raise Warning('Service {} is not running'.format(service))
         logging.debug('Init check OK')
 
-    def exit(self):
+    def exit(self, check=True):
         logging.debug('Running exit')
         # stop all services
         for service in self.dependencies['services']:
@@ -66,6 +74,8 @@ class initexit:
             with getattr(_module, service)() as s:
                 s.stop()
         logging.debug('Exit OK')
+        if check:
+            self.exit_check()
 
     def exit_check(self):
         # check services have stopped
