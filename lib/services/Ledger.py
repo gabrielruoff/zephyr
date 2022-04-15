@@ -22,6 +22,13 @@ class Ledger:
         self.ledger = None
         self._detect_running()
 
+    def __enter__(self):
+        self.__init__()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.docker.close()
+
     def _detect_running(self):
         try:
             self.ledger = self.docker.containers.get(self.containername)
@@ -31,19 +38,22 @@ class Ledger:
             logging.debug('ledger not already running')
         return False
 
-    def Start(self):
+    def start(self):
         logging.debug('starting ledger')
         _volumes = ['{}:{}'.format(self.confdir, '/etc/mysql'), '{}:{}'.format(self.datadir, '/var/lib/mysql')]
         _ports = {'3306/tcp': int(self.port)}
         _environment = ['MYSQL_ROOT_PASSWORD=zephyr']
-        try:
-            self.ledger = self.docker.containers.run(self.imagename, name=self.containername,
-                                                     hostname=self.containername, volumes=_volumes, ports=_ports,
-                                                     environment=_environment, detach=True)
-        except docker.errors.APIError as e:
-            raise Warning('failed to start ledger: {}'.format(e))
+        if not self._detect_running():
+            try:
+                self.ledger = self.docker.containers.run(self.imagename, name=self.containername,
+                                                         hostname=self.containername, volumes=_volumes, ports=_ports,
+                                                         environment=_environment, detach=True)
+            except docker.errors.APIError as e:
+                raise Warning('failed to start ledger: {}'.format(e))
+        else:
+            logging.debug('Not starting Ledger, already started')
 
-    def Stop(self):
+    def stop(self):
         logging.debug('stopping ledger')
         if self.ledger is None:
             logging.debug('cannot stop. ledger is not running')
@@ -65,6 +75,6 @@ class ledger_client:
 
 
 # l = Ledger()
-# l.Start()
+# l.start()
 # time.sleep(60)
-# l.Stop()
+# l.stop()
