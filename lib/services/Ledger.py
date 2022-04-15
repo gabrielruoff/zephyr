@@ -26,8 +26,10 @@ class Ledger:
         try:
             self.ledger = self.docker.containers.get(self.containername)
             logging.debug('ledger already running, attaching...')
+            return True
         except docker.errors.NotFound as e:
             logging.debug('ledger not already running')
+        return False
 
     def Start(self):
         logging.debug('starting ledger')
