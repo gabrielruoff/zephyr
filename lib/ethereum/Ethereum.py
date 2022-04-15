@@ -1,5 +1,4 @@
 import sys
-import web3
 from web3 import Web3
 import os
 from dotenv import load_dotenv
@@ -7,6 +6,7 @@ import logging
 import json
 
 load_dotenv('/home/common/dev/.env')
+logging.basicConfig(filename='/home/common/dev/logs/zephyr.log', level=logging.DEBUG)
 sys.path.insert(1, os.environ.get('PATH_SERVICES'))
 from Ganache import Ganache
 
@@ -70,10 +70,10 @@ class Ethereum:
         logging.debug('Transaction success ({})'.format(tx_hash))
         return Web3.toHex(tx_hash)
 
-e = Ethereum()
-print(e.rootkey)
-print(e._get_balance(e.addresses[1]))
-print(e._get_balance(e.addresses[0]))
-print(bytes(e.rootkey))
-print(e.addresses[0])
-e.transaction(e.addresses[0], e.addresses[1], 10)
+# e = Ethereum()
+# print(e.rootkey)
+# print(e._get_balance(e.addresses[1]))
+# print(e._get_balance(e.addresses[0]))
+# print(bytes(e.rootkey))
+# print(e.addresses[0])
+# e.transaction(e.addresses[0], e.addresses[1], 10)
