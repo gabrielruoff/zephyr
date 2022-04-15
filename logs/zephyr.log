@@ -1,0 +1,206 @@
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:stopping ledger
+DEBUG:root:ledger is not running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/7af4bc7fd0047587cf5a75ae41196500c34733aa70449730a2e89b5ca8fe8042/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/7af4bc7fd0047587cf5a75ae41196500c34733aa70449730a2e89b5ca8fe8042/start HTTP/1.1" 204 0
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/7af4bc7fd0047587cf5a75ae41196500c34733aa70449730a2e89b5ca8fe8042/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/7af4bc7fd0047587cf5a75ae41196500c34733aa70449730a2e89b5ca8fe8042?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/abc9b186269b7d4955846f65853bd2b490dcef273f3574348d18d57e27faed30/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/abc9b186269b7d4955846f65853bd2b490dcef273f3574348d18d57e27faed30/start HTTP/1.1" 500 235
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 409 233
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/abc9b186269b7d4955846f65853bd2b490dcef273f3574348d18d57e27faed30/stop HTTP/1.1" 304 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/abc9b186269b7d4955846f65853bd2b490dcef273f3574348d18d57e27faed30?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/cfdb5802bbcf5dae87e98d2ec7e77c2c7050507c7510ebc43d27179f1ffedf45/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/cfdb5802bbcf5dae87e98d2ec7e77c2c7050507c7510ebc43d27179f1ffedf45/start HTTP/1.1" 500 235
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 409 233
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/cfdb5802bbcf5dae87e98d2ec7e77c2c7050507c7510ebc43d27179f1ffedf45/stop HTTP/1.1" 304 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/cfdb5802bbcf5dae87e98d2ec7e77c2c7050507c7510ebc43d27179f1ffedf45?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/eb20f241451eb675beb4911c4b442930ec4260961f5c3b57d5d0b9aeb179497f/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/eb20f241451eb675beb4911c4b442930ec4260961f5c3b57d5d0b9aeb179497f/start HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/eb20f241451eb675beb4911c4b442930ec4260961f5c3b57d5d0b9aeb179497f/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/eb20f241451eb675beb4911c4b442930ec4260961f5c3b57d5d0b9aeb179497f?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/a170565543f68e94f89d61d354062249bfbe525abe6fc9a3cb62b60cf91acf8b/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/a170565543f68e94f89d61d354062249bfbe525abe6fc9a3cb62b60cf91acf8b/start HTTP/1.1" 204 0
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/a170565543f68e94f89d61d354062249bfbe525abe6fc9a3cb62b60cf91acf8b/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/a170565543f68e94f89d61d354062249bfbe525abe6fc9a3cb62b60cf91acf8b?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/490ef38b81f601a3682e2cd1972fad39bfd27fcc37a37210c9f9a943e6d79373/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/490ef38b81f601a3682e2cd1972fad39bfd27fcc37a37210c9f9a943e6d79373/start HTTP/1.1" 204 0
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/490ef38b81f601a3682e2cd1972fad39bfd27fcc37a37210c9f9a943e6d79373/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/490ef38b81f601a3682e2cd1972fad39bfd27fcc37a37210c9f9a943e6d79373?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/f8f46e41ad643ea5bcfd38ba02e6f9bb1a43036d243b646954ecf4265ccc36d0/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/f8f46e41ad643ea5bcfd38ba02e6f9bb1a43036d243b646954ecf4265ccc36d0/start HTTP/1.1" 204 0
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/f8f46e41ad643ea5bcfd38ba02e6f9bb1a43036d243b646954ecf4265ccc36d0/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/f8f46e41ad643ea5bcfd38ba02e6f9bb1a43036d243b646954ecf4265ccc36d0?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/0b8fc675d27d9994c1ae26a3ace2b57e8c8f2cc39a6f7e789b1b605bb20682f6/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/0b8fc675d27d9994c1ae26a3ace2b57e8c8f2cc39a6f7e789b1b605bb20682f6/start HTTP/1.1" 204 0
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/0b8fc675d27d9994c1ae26a3ace2b57e8c8f2cc39a6f7e789b1b605bb20682f6/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/0b8fc675d27d9994c1ae26a3ace2b57e8c8f2cc39a6f7e789b1b605bb20682f6?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/6a57c309f864a1773fbe81ed709fd3e0d95e52f8e0e4394c8b3daa224c77acb8/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/6a57c309f864a1773fbe81ed709fd3e0d95e52f8e0e4394c8b3daa224c77acb8/start HTTP/1.1" 204 0
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/6a57c309f864a1773fbe81ed709fd3e0d95e52f8e0e4394c8b3daa224c77acb8/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/6a57c309f864a1773fbe81ed709fd3e0d95e52f8e0e4394c8b3daa224c77acb8?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/88a517cb411ef0f44f736c41379b485dd053401debd323b2651edade41c11915/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/88a517cb411ef0f44f736c41379b485dd053401debd323b2651edade41c11915/start HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/88a517cb411ef0f44f736c41379b485dd053401debd323b2651edade41c11915/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/88a517cb411ef0f44f736c41379b485dd053401debd323b2651edade41c11915?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/91c4b185a8f78ec43a35210fbdd03b55c0485092d24bd7372771aea03e72edc5/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/91c4b185a8f78ec43a35210fbdd03b55c0485092d24bd7372771aea03e72edc5/start HTTP/1.1" 204 0
