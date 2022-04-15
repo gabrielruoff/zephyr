@@ -15,6 +15,8 @@ class Ganache:
         logging.debug('initializing Ganache')
         # get ganache data dir from .env
         self.datadir = os.environ.get('GANACHE_DATADIR')
+        self.keyspath = os.environ.get('GANACHE_KEYSPATH')
+        self.mnemonic = os.environ.get('GANACHE_MNEMONIC')
         # port that ganache runs on
         self.port = os.environ.get('GANACHE_PORT')
         # get absolute path of executable
@@ -22,6 +24,13 @@ class Ganache:
         _executable = subprocess.check_output(['bash', 'which', _executable])
         self.executable = _executable.decode("utf-8").rstrip('\n')
         self.pid = None
+
+    def __enter__(self):
+        self.__init__()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
 
     def _detect_running(self):
         try:
@@ -35,7 +44,7 @@ class Ganache:
 
     def start(self):
         # --db flag sets datadir
-        _startcommand = [self.executable, '--db', self.datadir]
+        _startcommand = [self.executable, '--db', self.datadir, '--account_keys_path', self.keyspath, '-m', self.mnemonic]
         # start ganache and detach
         subprocess.Popen(_startcommand, start_new_session=True)
         logging.debug('started Ganache')
