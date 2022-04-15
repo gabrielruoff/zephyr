@@ -34,7 +34,7 @@ class Ledger:
     def Start(self):
         logging.debug('starting ledger')
         _volumes = ['{}:{}'.format(self.confdir, '/etc/mysql'), '{}:{}'.format(self.datadir, '/var/lib/mysql')]
-        _ports = {'{}/tcp'.format(self.port): int(self.port) + 1}
+        _ports = {'3306/tcp': int(self.port)}
         _environment = ['MYSQL_ROOT_PASSWORD=zephyr']
         try:
             self.ledger = self.docker.containers.run(self.imagename, name=self.containername,
