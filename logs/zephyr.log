@@ -1471,3 +1471,589 @@ DEBUG:root:ledger not already running
 DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
 DEBUG:root:ledger not already running
 DEBUG:root:Exitcheck OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running init
+DEBUG:root:Starting Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Starting Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:Started Ganache
+DEBUG:root:Waiting for ganache to start...
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is running (4668)
+DEBUG:root:Confirmed Ganache has started
+DEBUG:root:Starting Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/6af6845d1dda8e3713801459a21fbaea9102bd4d7f19cb13653c33b168ba8dee/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/6af6845d1dda8e3713801459a21fbaea9102bd4d7f19cb13653c33b168ba8dee/start HTTP/1.1" 204 0
+DEBUG:root:Init OK
+DEBUG:root:Running init check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is running (4668)
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:Init check OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running exit
+DEBUG:root:Stopping Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Stopping Ganache
+DEBUG:root:Ganache is running (4668)
+DEBUG:root:stopped Ganache (4668)
+DEBUG:root:Stopping Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/6af6845d1dda8e3713801459a21fbaea9102bd4d7f19cb13653c33b168ba8dee/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/6af6845d1dda8e3713801459a21fbaea9102bd4d7f19cb13653c33b168ba8dee?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:Exit OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running exit
+DEBUG:root:Stopping Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Stopping Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:Cannot stop. Ganache is not running
+DEBUG:root:Stopping Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:stopping ledger
+DEBUG:root:cannot stop. ledger is not running
+DEBUG:root:Exit OK
+DEBUG:root:Running exit check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:Exitcheck OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running init
+DEBUG:root:Starting Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Starting Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:Started Ganache
+DEBUG:root:Waiting for ganache to start...
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is running (5747)
+DEBUG:root:Confirmed Ganache has started
+DEBUG:root:Starting Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/4e6e6d3c78070eff56e9c2e5bbdbc5fc378fd48814d9de25ed9bc849b014faee/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/4e6e6d3c78070eff56e9c2e5bbdbc5fc378fd48814d9de25ed9bc849b014faee/start HTTP/1.1" 204 0
+DEBUG:root:Init OK
+DEBUG:root:Running init check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is running (5747)
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:Init check OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running exit
+DEBUG:root:Stopping Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Stopping Ganache
+DEBUG:root:Ganache is running (5747)
+DEBUG:root:stopped Ganache (5747)
+DEBUG:root:Stopping Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/4e6e6d3c78070eff56e9c2e5bbdbc5fc378fd48814d9de25ed9bc849b014faee/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/4e6e6d3c78070eff56e9c2e5bbdbc5fc378fd48814d9de25ed9bc849b014faee?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:Exit OK
+DEBUG:root:Running exit check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:Exitcheck OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running init
+DEBUG:root:Starting Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Starting Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:Started Ganache
+DEBUG:root:Waiting for ganache to start...
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is running (6649)
+DEBUG:root:Confirmed Ganache has started
+DEBUG:root:Starting Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/14f029f908c8271e70f20197f5c9a339df1d3a590649179f15f70d6b237c7162/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/14f029f908c8271e70f20197f5c9a339df1d3a590649179f15f70d6b237c7162/start HTTP/1.1" 204 0
+DEBUG:root:Init OK
+DEBUG:root:Running init check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is running (6649)
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:Init check OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running init
+DEBUG:root:Starting Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Starting Ganache
+DEBUG:root:Ganache is running (6649)
+DEBUG:root:Not starting Ganache, already started
+DEBUG:root:Starting Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:Not starting Ledger, already started
+DEBUG:root:Init OK
+DEBUG:root:Running init check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is running (6649)
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:Init check OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running exit
+DEBUG:root:Stopping Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Stopping Ganache
+DEBUG:root:Ganache is running (6649)
+DEBUG:root:stopped Ganache (6649)
+DEBUG:root:Stopping Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/14f029f908c8271e70f20197f5c9a339df1d3a590649179f15f70d6b237c7162/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/14f029f908c8271e70f20197f5c9a339df1d3a590649179f15f70d6b237c7162?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:Exit OK
+DEBUG:root:Running exit check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:Exitcheck OK
+DEBUG:root:Running init
+DEBUG:root:Starting Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Starting Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:Started Ganache
+DEBUG:root:Waiting for ganache to start...
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is running (12680)
+DEBUG:root:Confirmed Ganache has started
+DEBUG:root:Starting Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/7baa25808fe4d1ec823f9b5816272414be4c6004a6477300b746c1384aa3ee0c/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/7baa25808fe4d1ec823f9b5816272414be4c6004a6477300b746c1384aa3ee0c/start HTTP/1.1" 204 0
+DEBUG:root:Init OK
+DEBUG:root:Running init check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is running (12680)
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:Init check OK
+DEBUG:root:Importing dependencies
+DEBUG:root:Running exit
+DEBUG:root:Stopping Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Stopping Ganache
+DEBUG:root:Ganache is running (12680)
+DEBUG:root:stopped Ganache (12680)
+DEBUG:root:Stopping Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:stopping ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/7baa25808fe4d1ec823f9b5816272414be4c6004a6477300b746c1384aa3ee0c/stop HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:http://localhost:None "DELETE /v1.35/containers/7baa25808fe4d1ec823f9b5816272414be4c6004a6477300b746c1384aa3ee0c?v=False&link=False&force=False HTTP/1.1" 204 0
+DEBUG:root:Exit OK
+DEBUG:root:Running exit check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:Exitcheck OK
+DEBUG:root:Running init
+DEBUG:root:Starting Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Starting Ganache
+DEBUG:root:Ganache is not running
+DEBUG:root:Started Ganache
+DEBUG:root:Waiting for ganache to start...
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is not running
+DEBUG:root:Ganache is running (13084)
+DEBUG:root:Confirmed Ganache has started
+DEBUG:root:Starting Ledger
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:root:starting ledger
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 404 40
+DEBUG:root:ledger not already running
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/create?name=ledger HTTP/1.1" 201 88
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/acd129e05dbaa73dfacf694b2223c93e26d7823eb99c4e7897e9237497109313/json HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:http://localhost:None "POST /v1.35/containers/acd129e05dbaa73dfacf694b2223c93e26d7823eb99c4e7897e9237497109313/start HTTP/1.1" 204 0
+DEBUG:root:Init OK
+DEBUG:root:Running init check
+DEBUG:root:initializing Ganache
+DEBUG:root:initializing Ganache
+DEBUG:root:Ganache is running (13084)
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:initializing ledger
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:docker.utils.config:Trying paths: ['/home/gruoff/.docker/config.json', '/home/gruoff/.dockercfg']
+DEBUG:docker.utils.config:No config file found
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:urllib3.connectionpool:http://localhost:None "GET /v1.35/containers/ledger/json HTTP/1.1" 200 None
+DEBUG:root:ledger already running, attaching...
+DEBUG:root:Init check OK

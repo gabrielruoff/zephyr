@@ -69,9 +69,10 @@ class ledger_client:
     def __init__(self):
         self.host = os.environ.get('LEDGER_HOST')
         self.user = os.environ.get('LEDGER_USER')
+        self.passwd = os.environ.get('LEDGER_PASS')
         self.port = os.environ.get('LEDGER_PORT')
         self.db = os.environ.get('LEDGER_DB')
-        self.cnx = mysql.connector.connect(user=self.user, host=self.host, database=self.db)
+        self.cnx = mysql.connector.connect(user=self.user, password=self.passwd, host=self.host, database=self.db)
 
 
 # l = Ledger()
