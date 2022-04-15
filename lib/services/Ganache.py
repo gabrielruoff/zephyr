@@ -1,8 +1,11 @@
 import subprocess
 import logging
 import os
+import time
+
 from dotenv import load_dotenv
 
+logging.basicConfig(filename='/home/common/dev/logs/zephyr.log', level=logging.DEBUG)
 load_dotenv('/home/common/dev/.env')
 
 
@@ -37,3 +40,7 @@ class Ganache:
         except subprocess.CalledProcessError as e:
             logging.debug('Ganache failed to stop or is not started: {}'.format(e))
 
+# g = Ganache()
+# g.start()
+# time.sleep(15)
+# g.stop()
