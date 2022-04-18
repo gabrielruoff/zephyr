@@ -26,7 +26,8 @@ class Ethereum:
             logging.debug('Web3 client connected to {}'.format(self.connection_string))
         self.keys = os.environ.get('GANACHE_KEYSPATH')
         self.addresses = self._get_addresses()
-        self.rootkey = self._get_privkey(self.addresses[0])
+        self.rootaddress = self.addresses[0]
+        self.rootkey = self._get_privkey(self.rootaddress)
 
     def __enter__(self):
         self.__init__()
@@ -52,23 +53,27 @@ class Ethereum:
         _privkey = _keys['addresses'][address]['secretKey']['data']
         return bytes(_privkey)
 
-    def transaction(self, tx, rx, value):
-        _rx = Web3.toChecksumAddress(rx)
-        _tx = Web3.toChecksumAddress(tx)
-        _nonce = self.w3.eth.getTransactionCount(_tx)
-        _transaction = {
-            'nonce': _nonce,
-            'to': _rx,
-            'value': Web3.toWei(value, 'ether'),
-            'gasPrice': 20000000000,
-            'gas': 4712388
-        }
-        logging.debug('Building transaction {}'.format(_transaction))
-        _transaction = self.w3.eth.account.signTransaction(_transaction, self._get_privkey(tx))
-        logging.debug('Signed Transaction')
-        tx_hash = self.w3.eth.sendRawTransaction(_transaction.rawTransaction)
-        logging.debug('Transaction success ({})'.format(tx_hash))
-        return Web3.toHex(tx_hash)
+    def do_transaction(self, tx, rx, value):
+        logging.debug('Trying transaction {} -> {} ({} ether)'.format(tx, rx, value))
+        try:
+            _rx = Web3.toChecksumAddress(rx)
+            _tx = Web3.toChecksumAddress(tx)
+            _nonce = self.w3.eth.getTransactionCount(_tx)
+            _transaction = {
+                'nonce': _nonce,
+                'to': _rx,
+                'value': Web3.toWei(value, 'ether'),
+                'gasPrice': 20000000000,
+                'gas': 4712388
+            }
+            logging.debug('Building transaction {}'.format(_transaction))
+            _transaction = self.w3.eth.account.signTransaction(_transaction, self._get_privkey(tx))
+            logging.debug('Signed Transaction')
+            tx_hash = self.w3.eth.sendRawTransaction(_transaction.rawTransaction)
+            logging.debug('Transaction success ({})'.format(tx_hash))
+            return Web3.toHex(tx_hash)
+        except Exception as e:
+            logging.debug('Transaction failed: {}'.format(e))
 
 # e = Ethereum()
 # print(e.rootkey)
