@@ -38,42 +38,58 @@ class LedgerClient:
     def do_ledger_transaction(self, tx, rx):
         pass
 
-    def _ledger_select(self, cnx, db, table, match_field, match_target, suffix='', selection='*'):
-        q = "SELECT %s FROM %s WHERE %s='%s'" + suffix
-        d = (selection, (db + '.' + table), match_field, match_target)
-        # print(q % d)
-        cursor = cnx.cursor()
-        cursor.execute(q % d)
-        selected = cursor.fetchall()
-        cursor.close()
-        return selected
+    def _change_balance(self, user_id, newbalance):
+        logging.debug('Changing balance for {} to {}'.format(user_id, newbalance))
+        _userstable = 'users'
+        _fields = ['balance']
+        _data = [newbalance]
+        _where = ['PK_user_id', user_id]
+        try:
+            _ledger_update(self.cnx, self.db, _userstable, _fields, _data, _where)
+            logging.debug('Change balance succeeded ({} -> {})'.format(user_id, newbalance)
+            return True
+        except Exception as e:
+            logging.debug('Change balance failed ({})'.format(e))
+            return False
 
-    def _ledger_insert(self, cnx, db, table, fields, data, user, password, host, suffix=""):
-        fields = [field.replace('\'', '\\''') for field in fields]
-        data = [d.replace('\'', '\\''') for d in data]
-        q = "INSERT INTO %s (" + ("%s, " * (len(fields) - 1)) + "%s) VALUES (" + (
-                "'%s', " * (len(data) - 1)) + "'%s') " + suffix
-        d = (db + '.' + table, *fields, *data)
-        # print(q % d)
-        cursor = cnx.cursor()
-        cursor.execute(q % d)
-        cnx.commit()
-        cursor.close()
-        return True
 
-    def _ledger_update(self, cnx, db, table, fields, data, where, target, suffix=''):
-        q = "UPDATE %s SET " + (("%s='%s', " * (len(fields) - 1)) + "%s='%s'") + " WHERE %s='%s'" + suffix
-        # list to store ordered field=data information for set clause
-        fieldsdata = []
-        while fields:
-            fieldsdata.append(fields.pop(0))
-            fieldsdata.append(data.pop(0))
-        d = (db+ '.' + table, *fieldsdata, where, target)
-        cursor = cnx.cursor()
-        print(q % d)
-        cursor.execute(q % d)
-        cnx.commit()
-        updated = cursor.fetchall()
-        cursor.close()
-        return True
+def _ledger_select(cnx, db, table, match_field, match_target, suffix='', selection='*'):
+    q = "SELECT %s FROM %s WHERE %s='%s'" + suffix
+    d = (selection, (db + '.' + table), match_field, match_target)
+    # print(q % d)
+    cursor = cnx.cursor()
+    cursor.execute(q % d)
+    selected = cursor.fetchall()
+    cursor.close()
+    return selected
 
+
+def _ledger_insert(cnx, db, table, fields, data, user, password, host, suffix=""):
+    fields = [field.replace('\'', '\\''') for field in fields]
+    data = [d.replace('\'', '\\''') for d in data]
+    q = "INSERT INTO %s (" + ("%s, " * (len(fields) - 1)) + "%s) VALUES (" + (
+            "'%s', " * (len(data) - 1)) + "'%s') " + suffix
+    d = (db + '.' + table, *fields, *data)
+    # print(q % d)
+    cursor = cnx.cursor()
+    cursor.execute(q % d)
+    cnx.commit()
+    cursor.close()
+    return True
+
+
+def _ledger_update(cnx, db, table, fields, data, where, suffix=''):
+    q = "UPDATE %s SET " + (("%s='%s', " * (len(fields) - 1)) + "%s='%s'") + " WHERE %s='%s'" + suffix
+    # list to store ordered field=data information for set clause
+    fieldsdata = []
+    while fields:
+        fieldsdata.append(fields.pop(0))
+        fieldsdata.append(data.pop(0))
+    d = (db + '.' + table, *fieldsdata, where)
+    cursor = cnx.cursor()
+    print(q % d)
+    cursor.execute(q % d)
+    cnx.commit()
+    updated = cursor.fetchall()
+    cursor.close()
+    return True
