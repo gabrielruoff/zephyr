@@ -1,4 +1,5 @@
 import logging
+
 from lib.core import initexit
 from dotenv import load_dotenv
 

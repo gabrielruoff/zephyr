@@ -44,7 +44,7 @@ class initexit:
     def init(self, check=True):
         logging.debug('Running init')
         if not self.dependencies:
-            raise Warning('Trying to init without import dependencies')
+            raise Warning('Trying to init without importing dependencies')
         # start all services
         for service in self.dependencies['services']:
             logging.debug('Starting {}'.format(service))
