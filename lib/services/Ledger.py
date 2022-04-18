@@ -1,8 +1,5 @@
 import logging
 import os
-import time
-import mysql.connector
-
 import docker
 from dotenv import load_dotenv
 
@@ -65,15 +62,6 @@ class Ledger:
         except docker.errors.APIError as e:
             logging.debug('failed to stop ledger: {}'.format(e))
 
-
-class ledger_client:
-    def __init__(self):
-        self.host = os.environ.get('LEDGER_HOST')
-        self.user = os.environ.get('LEDGER_USER')
-        self.passwd = os.environ.get('LEDGER_PASS')
-        self.port = os.environ.get('LEDGER_PORT')
-        self.db = os.environ.get('LEDGER_DB')
-        self.cnx = mysql.connector.connect(user=self.user, password=self.passwd, host=self.host, database=self.db)
 
 
 # l = Ledger()
