@@ -47,12 +47,12 @@ class Ganache:
         if not self._detect_running():
             # --db flag sets datadir
             _startcommand = [self.executable, '--db', self.datadir, '--account_keys_path', self.keyspath, '-m', self.mnemonic]
-            # start ganache and detach
+            # start ganache and detach process
             subprocess.Popen(_startcommand, start_new_session=True)
             logging.debug('Started Ganache')
             logging.debug('Waiting for ganache to start...')
             while not self._detect_running():
-                time.sleep(0.1)
+                time.sleep(0.2)
             logging.debug('Confirmed Ganache has started')
         else:
             logging.debug('Not starting Ganache, already started')
