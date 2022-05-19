@@ -19,10 +19,18 @@ class LedgerClient:
         self.passwd = os.environ.get('LEDGER_PASS')
         self.port = os.environ.get('LEDGER_PORT')
         self.db = os.environ.get('LEDGER_DB')
-        self.cnx = mysql.connector.connect(user=self.user, password=self.passwd, host=self.host, port=self.port, database=self.db)
+        self.cnx = mysql.connector.connect(user=self.user, password=self.passwd, host=self.host, port=self.port,
+                                           database=self.db)
 
         self._userstable = 'users'
         self._transactionstable = 'transactions'
+
+    def __enter__(self):
+        self.__init__()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
 
     def do_deposit(self, rx, value):
         pass
@@ -40,6 +48,7 @@ class LedgerClient:
                 logging.debug('Eth withdrawl failed')
                 return False
 
+    # tx and rx are in user_id format
     def do_ledger_transaction(self, tx, rx, value):
         _fields = ['tx', 'rx', 'value']
         _values = [str(tx), str(rx), str(value)]
@@ -51,6 +60,9 @@ class LedgerClient:
         self._change_balance(tx, tx_balance - value)
         self._change_balance(rx, rx_balance + value)
         return True
+
+    def verify_pkey(self, user_id, pkey):
+        return str(pkey) == self._get_pkey_from_user_id(user_id)
 
     def _change_balance(self, user_id, newbalance):
         logging.debug('Changing balance for {} to {}'.format(user_id, newbalance))
@@ -68,6 +80,14 @@ class LedgerClient:
     def _get_user_id_from_username(self, username):
         rs = self._mysql_select(self._userstable, 'username', username, selection='PK_user_id')
         return int(rs[0][0])
+
+    def _get_pkey_from_user_id(self, user_id):
+        rs = self._mysql_select(self._userstable, 'PK_user_id', user_id, selection='pkey')
+        return str(rs[0][0])
+
+    def _get_latest_transaction_id(self, user_id):
+        txid = self._mysql_select(self._transactionstable, 'tx', user_id, suffix='order by PK_transaction_id desc', selection='PK_transaction_id')
+        return str(txid[0][0])
 
     def _get_balance(self, username='', user_id=''):
         s = ''
