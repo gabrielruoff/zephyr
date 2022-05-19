@@ -45,8 +45,6 @@ class initexit:
         _values = list(map(__import__, self.dependencies['services']))
         for i, key in enumerate(self.dependencies['services']):
             self.services[key] = _values[i]
-        # for i, s in enumerate(self.dependencies['services']):
-        #     sys.modules.append(_modules[i])
         # core
         # add clients dir to path
         sys.path.insert(1, os.environ.get('PATH_CORE'))

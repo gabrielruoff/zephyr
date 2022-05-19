@@ -55,10 +55,10 @@ class LedgerClient:
         # process transaction on ledger
         self._mysql_insert(self._transactionstable, _fields, _values)
         # update user balances accordingly
-        tx_balance = self._get_balance(user_id=tx)
-        rx_balance = self._get_balance(user_id=rx)
-        self._change_balance(tx, tx_balance - value)
-        self._change_balance(rx, rx_balance + value)
+        tx_balance = float(self._get_balance(user_id=tx))
+        rx_balance = float(self._get_balance(user_id=rx))
+        self._change_balance(tx, tx_balance - float(value))
+        self._change_balance(rx, rx_balance + float(value))
         return True
 
     def verify_pkey(self, user_id, pkey):
