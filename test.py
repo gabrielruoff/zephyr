@@ -10,10 +10,10 @@ logging.basicConfig(filename='/home/common/dev/logs/zephyr.log', level=logging.D
 
 initexithandler = initexit.initexit()
 initexithandler.import_dependencies()
-# initexithandler.exit()
-# time.sleep(1)
-# initexithandler.init()
-# time.sleep(2)
+initexithandler.exit()
+time.sleep(1)
+initexithandler.init()
+time.sleep(2)
 
 c = initexithandler.core['LedgerClient'].LedgerClient()
 # c._mysql_update('transactions',['value'],['10'],['tx', 'tx'])

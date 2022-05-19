@@ -20,7 +20,6 @@ class transactions:
     def __init__(self):
         self.initexithandler = initexit.initexit()
         self.initexithandler.import_dependencies()
-        self.core = self.initexithandler.dependencies['core']
     def __enter__(self):
         self.__init__()
         return self
@@ -34,7 +33,7 @@ class transactions:
         value = body['value']
         pkey = body['pkey']
         logging.debug('[API] attempting transaction {} -> {} ({})'.format(tx, rx, str(value)))
-        with self.core['LedgerClient'].LedgerClient() as ledger:
+        with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
             txuid = ledger._get_user_id_from_username(tx)
             rxuid = ledger._get_user_id_from_username(rx)
             # verify pkey
