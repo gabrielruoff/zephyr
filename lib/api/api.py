@@ -35,6 +35,6 @@ class Transactions(Resource):
         # -
         # -
         with transactions() as t:
-            func = getattr(a, method)
+            func = getattr(t, method)
             print(func)
             return func(body)
