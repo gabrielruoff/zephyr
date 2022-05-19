@@ -34,8 +34,8 @@ class transactions:
         pkey = body['pkey']
         logging.debug('[API] attempting transaction {} -> {} ({})'.format(tx, rx, str(value)))
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            txuid = ledger._get_user_id_from_username(tx)
-            rxuid = ledger._get_user_id_from_username(rx)
+            txuid = ledger.get_user_id_from_username(tx)
+            rxuid = ledger.get_user_id_from_username(rx)
             # verify pkey
             logging.debug('[API] trying submitted pkey {}'.format(pkey))
             if ledger.verify_pkey(txuid, pkey):

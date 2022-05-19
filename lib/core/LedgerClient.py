@@ -61,6 +61,10 @@ class LedgerClient:
         self._change_balance(rx, rx_balance + float(value))
         return True
 
+    def get_user_id_from_username(self, username):
+        rs = self._mysql_select(self._userstable, 'username', username, selection='PK_user_id')
+        return int(rs[0][0])
+
     def verify_pkey(self, user_id, pkey):
         return str(pkey) == self._get_pkey_from_user_id(user_id)
 
@@ -76,10 +80,6 @@ class LedgerClient:
         except Exception as e:
             logging.debug('Change balance failed ({})'.format(e))
             return False
-
-    def _get_user_id_from_username(self, username):
-        rs = self._mysql_select(self._userstable, 'username', username, selection='PK_user_id')
-        return int(rs[0][0])
 
     def _get_pkey_from_user_id(self, user_id):
         rs = self._mysql_select(self._userstable, 'PK_user_id', user_id, selection='pkey')
