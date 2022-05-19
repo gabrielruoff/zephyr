@@ -19,6 +19,8 @@ class initexit:
 
         # uninitialized
         self.dependencies = {}
+        self.services = {}
+        self.core = {}
 
     def __enter__(self):
         self.__init__()
@@ -31,15 +33,27 @@ class initexit:
         logging.debug('Importing dependencies')
         # read dependencies
         dependencies = dict(self.config.items('Dependencies'))
+        # services
         self.dependencies['services'] = dependencies['services'].split(',')
+        # core
+        self.dependencies['core'] = dependencies['core'].split(',')
         # import dependencies
         # services
         # add services dir to path
         sys.path.insert(1, os.environ.get('PATH_SERVICES'))
         # import services
-        _modules = list(map(__import__, self.dependencies['services']))
-        for i, s in enumerate(self.dependencies['services']):
-            sys.modules[s] = _modules[i]
+        _values = list(map(__import__, self.dependencies['services']))
+        for i, key in enumerate(self.dependencies['services']):
+            self.services[key] = _values[i]
+        # for i, s in enumerate(self.dependencies['services']):
+        #     sys.modules.append(_modules[i])
+        # core
+        # add clients dir to path
+        sys.path.insert(1, os.environ.get('PATH_CORE'))
+        # import core
+        _values = list(map(__import__, self.dependencies['core']))
+        for i, key in enumerate(self.dependencies['core']):
+            self.core[key] = _values[i]
 
     def init(self, check=True):
         logging.debug('Running init')
