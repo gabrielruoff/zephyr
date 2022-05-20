@@ -4,8 +4,8 @@ from django.http import HttpResponse
 from django.template import loader
 
 
-def index(request):
-    template = loader.get_template('templates/Account.html')
+def index(request, username):
+    template = loader.get_template('Account.html')
     context = {
 
     }
