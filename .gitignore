@@ -3,4 +3,4 @@ persistent/services/ganache/keys/
 #persistent/services/ledger/data/
 venv/
 .datagrip/
-frontend/zephyr/static/img/src/
+/frontend/zephyr/static/img/src/
