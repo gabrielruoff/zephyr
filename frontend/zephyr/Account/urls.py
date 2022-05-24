@@ -19,6 +19,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<str:username>/', views.index, name='account'),
+    path('<str:username>/', views.index, name='index'),
+    path('<str:username>/<str:referrer>', views.index, name='reload'),
 ]

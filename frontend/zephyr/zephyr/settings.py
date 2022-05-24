@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-+-x(alqz0)r2@hr6xxzw1#1+o^3))_^t3%tjy*9e01=i9@c%*d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.122.176', '127.0.0.1', 'ccr-testbench']
 
 
 # Application definition
@@ -63,6 +63,9 @@ TEMPLATES = [
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
+            'libraries': {
+              'templatetags_Account': 'Account.templatetags.templatetags_Account',
+},
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',

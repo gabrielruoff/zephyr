@@ -77,8 +77,8 @@ class Ethereum:
 
 # e = Ethereum()
 # print(e.rootkey)
-# print(e._get_balance(e.addresses[1]))
-# print(e._get_balance(e.addresses[0]))
+# print(e.getbalance(e.addresses[1]))
+# print(e.getbalance(e.addresses[0]))
 # print(bytes(e.rootkey))
 # print(e.addresses[0])
 # e.transaction(e.addresses[0], e.addresses[1], 10)

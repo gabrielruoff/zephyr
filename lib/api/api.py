@@ -1,19 +1,22 @@
 from flask import Flask
 from flask_restful import Api, Resource, request
+from flask_cors import CORS
+
 
 from api_ref import *
 
 app = Flask(__name__)
 api = Api(app)
+cors = CORS(app, resources={r"/Account/*": {"origins": "*"}})
 
 
 # manage Accounts
 class Accounts(Resource):
-
     def post(self, username):
         content = request.get_json()
         # get request method and body
         method, body = content['method'], content['body']
+        body['origin'] = request.remote_addr
         # METHODS
         # -
         # -
@@ -31,6 +34,7 @@ class Transactions(Resource):
         content = request.get_json()
         # get request method and body
         method, body = content['method'], content['body']
+        body['origin'] = request.remote_addr
         # METHODS
         # -
         # -
@@ -43,7 +47,7 @@ class Transactions(Resource):
 
 
 # add all to API
-api.add_resource(Accounts, '/Accounts/<username>')
+api.add_resource(Accounts, '/Account/<username>')
 api.add_resource(Transactions, '/Transactions/<username>')
 
 if __name__ == '__main__':
