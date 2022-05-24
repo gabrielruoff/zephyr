@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Dashboard Template · Bootstrap v5.0</title>
+    <title>Zephyr Demo</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -33,13 +33,17 @@
 
 
     <!-- Custom styles for this template -->
+    {% load templatetags_Account %}
     <link href="{% static 'css/Account.css' %}" rel="stylesheet">
 </head>
 <body>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <img src="{% static 'img/zephyr-text-logo.png' %}" alt="Zephyr", style="width: 200px; height: auto">
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand me-0 px-3" , href="/"> <img src="{% static 'img/zephyr-text-logo-white.png' %}" alt="Zephyr-logo"
+                                                       , style="width: 200px; height: auto"> </a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-nav">
@@ -51,25 +55,13 @@
 
 <div class="container-fluid">
     <div class="row">
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" , style="margin-top: 40px">
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">
                             <span data-feather="home"></span>
                             Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="arrow-down-right"></span>
-                            Deposit
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="arrow-up-right"></span>
-                            Withdraw
                         </a>
                     </li>
                 </ul>
@@ -96,10 +88,69 @@
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2"> {{ user.username }} </h1>
+                <h1 class="h2">  </h1>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+            <div class="container">
+                <div class="row" style="width: fit-content">
+                        <h1 style="font-weight: bold; text-align: left"> Welcome, {{ user.username }}</h1>
+                </div>
+                <div class="row row justify-content-center align-self-center h-100">
+                    <div class="col-sm row justify-content-center align-self-center h-100">
+                        <div class="row justify-content-center align-self-center h-100">
+                            <h1 style="font-weight: bold; text-align: center; font-size: 60px"> ${{ assets.fiat.balance|floatformat:"2g" }} </h1>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <script>
+                            var labels = [ {% for label in transactions.balancechart.labels %}
+                            '{{ label }}',
+                            {% endfor %} ]
+                            var data = [ {% for data in transactions.balancechart.data %}
+                            '{{ data }}',
+                            {% endfor %} ]
+                        </script>
+                        <canvas class="my-4 w-100" id="balanceChart" width=auto height=auto></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1> My Wallets </h1>
+                <div class="row">
+                    {% for ticker in assets.crypto.tickers %}
+                    <div
+                    class="col-sm {% if user.selectedticker == ticker %} border border-info rounded {% endif %}" style="margin: 20px" id="{{ ticker }}">
+                        <div class="row">
+                        {% with ticker|add:"-logo.png" as imgname %}
+                        {% with "img/"|add:imgname as imgsrc %}
+                        <img src="{% static imgsrc %}" alt="{{ imgname }}" style="width: 150px; height: auto; margin-left: auto; margin-right: auto; margin-top: 50px">
+                        {% endwith %}
+                        {% endwith %}
+                        </div>
+                        <div class="container" style="height: 25px"></div>
+                        <div class="row">
+                            {% with assets.crypto.prices|lookup:ticker|floatformat as cryptoprice %}
+                        <h2 style="text-align: center; text-transform: uppercase"> {{ assets.crypto.balances|lookup:ticker }} {{ ticker }} <br>
+                            (${{ assets.crypto.balances|lookup:ticker|multiply:cryptoprice|floatformat:"2g" }})</h2>
+                        <p style="text-align: center; font-size: 17px; text-transform: uppercase"> {{ ticker }} &#8776; ${{ cryptoprice|floatformat:"2g" }} </p>
+                            {% endwith %}
+                        </div>
+                        <div class="row">
+                             {% if user.selectedticker == ticker %}
+                            <button type="button" class="btn btn-primary" id="{{ ticker }}button" onclick="set_selected_ticker('{{ user.username }}', '{{ ticker }}', oldticker)" style="margin-top: 10px; margin-left: auto; margin-right: auto; margin-bottom: 50px; width: 50%">
+                                Spending
+                                {% else %}
+                                <script> var oldticker = '{{ user.selectedticker }}' </script>
+                                <button type="button" class="btn btn-secondary" id="{{ ticker }}button" onclick="set_selected_ticker('{{ user.username }}', '{{ ticker }}', oldticker)" style="margin-top: 10px; margin-left: auto; margin-right: auto; margin-bottom: 50px; width: 50%">
+                                Spend
+                            {% endif %}
+                            </button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
 
             <h2> {{ transactions.table.title }}</h2>
             <div class="table-responsive">
@@ -136,5 +187,7 @@
         integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
         crossorigin="anonymous"></script>
 <script src="{% static 'js/Account.js' %}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 </body>
 </html>
