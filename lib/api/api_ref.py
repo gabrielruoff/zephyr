@@ -29,7 +29,10 @@ class accounts:
 
     def setselectedticker(self, username, body):
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            if ledger.setselectedticker(ledger.get_user_id_username(username=username), body['selectedticker']):
+            uid = ledger.get_user_id_username(username=username)
+            if body['userid']:
+                uid = body['userid']
+            if ledger.setselectedticker(uid, body['selectedticker']):
                 return build_api_response(True)
 
     def getselectedticker(self, username, body):
