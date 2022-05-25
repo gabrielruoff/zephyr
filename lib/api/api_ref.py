@@ -29,15 +29,20 @@ class accounts:
 
     def setselectedticker(self, username, body):
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            uid = ledger.get_user_id_username(username=username)
-            if body['userid']:
+            try:
                 uid = body['userid']
+            except KeyError as e:
+                uid = ledger.get_user_id_username(username=username)
             if ledger.setselectedticker(uid, body['selectedticker']):
                 return build_api_response(True)
 
     def getselectedticker(self, username, body):
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            st = ledger.getselectedticker(ledger.get_user_id_username(username=username))
+            try:
+                uid = body['userid']
+            except KeyError as e:
+                uid = ledger.get_user_id_username(username=username)
+            st = ledger.getselectedticker(uid)
             return build_api_response(True, data=st, wrapper='selectedticker')
 
 
@@ -109,7 +114,6 @@ class transactions:
             tickers = ledger.getsupportedtickers()
             tickers.remove('fiat')
             return build_api_response(True, data=tickers, wrapper='tickers')
-
 
 
 def build_api_response(success, err='', data='', wrapper=''):
