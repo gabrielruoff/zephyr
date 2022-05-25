@@ -29,15 +29,20 @@ class accounts:
 
     def setselectedticker(self, username, body):
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            uid = ledger.get_user_id_username(username=username)
             if body['userid']:
                 uid = body['userid']
+            else:
+                uid = ledger.get_user_id_username(username=username)
             if ledger.setselectedticker(uid, body['selectedticker']):
                 return build_api_response(True)
 
     def getselectedticker(self, username, body):
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            st = ledger.getselectedticker(ledger.get_user_id_username(username=username))
+            try:
+                uid = body['userid']
+            except KeyError as e:
+                uid = ledger.get_user_id_username(username=username)
+            st = ledger.getselectedticker(uid)
             return build_api_response(True, data=st, wrapper='selectedticker')
 
 
@@ -61,13 +66,16 @@ class transactions:
         pkey = body['pkey']
         logging.debug('[API] attempting transaction {} -> {} ({})'.format(tx, rx, str(value)))
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            txuid = ledger.get_user_id_username(tx)
-            rxuid = ledger.get_user_id_username(rx)
+            try:
+                txuid = body['txuserid']
+            except KeyError as e:
+                txuid = ledger.get_user_id_username(username=tx)
             # verify pkey
             logging.debug('[API] trying submitted pkey {}'.format(pkey))
-            if ledger.verify_pkey(txuid, pkey):
+            if ledger.verify_pkey(rx, pkey):
+                asset = ledger.getselectedticker(txuid)
                 logging.debug('[API] pkey accepted, proceeding')
-                ledger.do_ledger_transaction(txuid, rxuid, value)
+                ledger.do_ledger_transaction(txuid, rx, asset, value)
                 tx_id = ledger.get_latest_transaction_id(txuid)
             else:
                 logging.debug('[API] pkey rejected, cancelling transaction')
