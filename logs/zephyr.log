@@ -644,3 +644,30 @@ DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/pri
 INFO:werkzeug:127.0.0.1 - - [25/May/2022 06:58:01] "POST /Transactions/User1 HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in '/home/common/dev/frontend/zephyr/zephyr/urls.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.122.176:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [25/May/2022 07:11:07] "[35m[1mPOST /Account/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/common/dev/lib/api/api_ref.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [25/May/2022 07:13:37] "[35m[1mPOST /Account/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/common/dev/lib/api/api_ref.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [25/May/2022 07:14:14] "POST /Account/2 HTTP/1.1" 200 -
