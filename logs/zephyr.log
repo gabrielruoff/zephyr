@@ -642,3 +642,5 @@ DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/pri
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
 DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
 INFO:werkzeug:127.0.0.1 - - [25/May/2022 06:58:01] "POST /Transactions/User1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/common/dev/frontend/zephyr/zephyr/urls.py', reloading
+INFO:werkzeug: * Restarting with stat
