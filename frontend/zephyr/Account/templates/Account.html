@@ -120,7 +120,7 @@
                 <div class="row">
                     {% for ticker in assets.crypto.tickers %}
                     <div
-                    class="col-sm {% if user.selectedticker == ticker %} border border-info rounded {% endif %}" style="margin: 20px" id="{{ ticker }}">
+                    class="col-sm shadow-lg bg-light {% if user.selectedticker == ticker %} border border-info rounded {% endif %}" style="margin: 20px" id="{{ ticker }}">
                         <div class="row">
                         {% with ticker|add:"-logo.png" as imgname %}
                         {% with "img/"|add:imgname as imgsrc %}
