@@ -2,7 +2,6 @@ from flask import Flask
 from flask_restful import Api, Resource, request
 from flask_cors import CORS
 
-
 from api_ref import *
 
 app = Flask(__name__)

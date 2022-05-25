@@ -1,6 +1,5 @@
 import datetime
 import logging
-
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
@@ -9,6 +8,7 @@ import requests
 import json
 import pandas
 
+logging.basicConfig(filename='/home/common/dev/logs/zephyr.log', level=logging.DEBUG)
 default_http_headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 
 

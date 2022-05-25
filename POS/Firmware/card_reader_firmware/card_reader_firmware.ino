@@ -18,12 +18,10 @@
 
 #include <SPI.h>
 #include <MFRC522.h>
-
 #define RST_PIN         9           // Configurable, see typical pin layout above
 #define SS_PIN          10          // Configurable, see typical pin layout above
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
-
 MFRC522::MIFARE_Key key;
 
 byte block_height = 8;
@@ -128,7 +126,7 @@ void read_wallet_address(byte starting_block, MFRC522::MIFARE_Key keyA) {
       status = (MFRC522::StatusCode) mfrc522.MIFARE_Read(i, buffer, &size);
       if (status != MFRC522::STATUS_OK) {
         //        Serial.print(F("MIFARE_Read() failed: "));
-        Serial.println(mfrc522.GetStatusCodeName(status));
+//        Serial.println(mfrc522.GetStatusCodeName(status));
       }
 
       // dump read data into data array
@@ -171,7 +169,7 @@ void write_wallet_address() {
 
     // put your main code here, to run repeatedly:
     do {
-      Serial.println("writing mode");
+//      Serial.println("writing mode");
       //        Serial.print(recv); Serial.print(" available: "); Serial.println(Serial.available());
 
       remaining = Serial.available();
@@ -185,9 +183,9 @@ void write_wallet_address() {
     } while (recv < 336);
 
     //    remaining = Serial.available();
-    Serial.print("remaining: ");
-    Serial.println(remaining);
-    Serial.readBytes(chars, 8);
+//    Serial.print("remaining: ");
+//    Serial.println(remaining);
+//    Serial.readBytes(chars, 8);
     for (int i = sizeof(chars) - 8; i < sizeof(chars); i++)
       chars[i] = byte('!');
 
@@ -208,7 +206,7 @@ void write_block(MFRC522::MIFARE_Key keyA, MFRC522::MIFARE_Key keyB) {
 
   // determine how many blocks will be used
   float num_blocks = 1;
-  Serial.println(num_blocks);
+//  Serial.println(num_blocks);
 
   // determine how many sectors will be used
   int num_sectors = round(num_blocks / 4);
@@ -240,20 +238,20 @@ void write_block(MFRC522::MIFARE_Key keyA, MFRC522::MIFARE_Key keyB) {
   byte size = sizeof(buffer);
 
   // Authenticate using key A
-  Serial.println(F("Authenticating using key A..."));
+//  Serial.println(F("Authenticating using key A..."));
   status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, next_trailing, &keyA, &(mfrc522.uid));
   if (status != MFRC522::STATUS_OK) {
-    Serial.print(F("PCD_Authenticate() failed: "));
-    Serial.println(mfrc522.GetStatusCodeName(status));
+//    Serial.print(F("PCD_Authenticate() failed: "));
+//    Serial.println(mfrc522.GetStatusCodeName(status));
     return;
   }
 
   // Authenticate using key B
-  Serial.println(F("Authenticating again using key B..."));
+//  Serial.println(F("Authenticating again using key B..."));
   status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, next_trailing, &keyB, &(mfrc522.uid));
   if (status != MFRC522::STATUS_OK) {
-    Serial.print(F("PCD_Authenticate() failed: "));
-    Serial.println(mfrc522.GetStatusCodeName(status));
+//    Serial.print(F("PCD_Authenticate() failed: "));
+//    Serial.println(mfrc522.GetStatusCodeName(status));
     return;
   }
 
@@ -266,18 +264,18 @@ void write_block(MFRC522::MIFARE_Key keyA, MFRC522::MIFARE_Key keyB) {
       // authenticate this next sector using key B
       status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, next_trailing, &keyB, &(mfrc522.uid));
       if (status != MFRC522::STATUS_OK) {
-        Serial.print(F("PCD_Authenticate() failed: "));
-        Serial.println(mfrc522.GetStatusCodeName(status));
+//        Serial.print(F("PCD_Authenticate() failed: "));
+//        Serial.println(mfrc522.GetStatusCodeName(status));
         return;
       }
     }
 
     // Write chars to the block
-    Serial.print(F("Writing chars into block ")); Serial.println(block_height);
+//    Serial.print(F("Writing chars into block ")); Serial.println(block_height);
     status = (MFRC522::StatusCode) mfrc522.MIFARE_Write(block_height, block, block_size);
     if (status != MFRC522::STATUS_OK) {
-      Serial.print(F("MIFARE_Write() failed: "));
-      Serial.println(mfrc522.GetStatusCodeName(status));
+//      Serial.print(F("MIFARE_Write() failed: "));
+//      Serial.println(mfrc522.GetStatusCodeName(status));
     }
 
 
