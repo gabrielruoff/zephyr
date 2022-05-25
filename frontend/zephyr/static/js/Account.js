@@ -37,34 +37,18 @@
 })()
 
 function set_selected_ticker(username, ticker) {
-  var xhr = new XMLHttpRequest();
-  url = "http://localhost:5000/Account/" + username
-  xhr.open("POST", url, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(JSON.stringify({
-    method: 'setselectedticker',
-    body: {
-      selectedticker: ticker
-    }
-  }));
+  api_request(username, 'setselectedticker', {selectedticker: ticker})
+  // var xhr = new XMLHttpRequest();
+  // url = "http://localhost:5000/Account/" + username
+  // xhr.open("POST", url, true);
+  // xhr.setRequestHeader('Content-Type', 'application/json');
+  // xhr.send(JSON.stringify({
+  //   method: 'setselectedticker',
+  //   body: {
+  //     selectedticker: ticker
+  //   }
+  // }));
 
-//   url = "http://localhost:5000/Account/" + username
-//   xhr.open("POST", url, true);
-//   xhr.setRequestHeader('Content-Type', 'application/json');
-//   xhr.send(JSON.stringify({
-//     method: 'getsupportedtickers',
-//     body: {
-//
-//     }
-//   }));
-//   if (xhr.readyState == 4)
-//     if (xhr.status == 200)
-//       var json_data = JSON.parse(request.response);
-//
-// json_data.forEach((element) => {
-//   var container = document.getElementById(element)
-//   container.className = 'col-sm'
-//   })
   var old_container = document.querySelector("#" + oldticker)
   var old_button = document.querySelector("#" + oldticker + "button")
   old_container.classList.remove('border')
@@ -82,4 +66,15 @@ function set_selected_ticker(username, ticker) {
   // selected_button.onclick = set_selected_ticker(username, ticker)
 
   oldticker = ticker
+}
+
+  function api_request(uid, method, body) {
+  var xhr = new XMLHttpRequest();
+  apiurl + uid
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+    method: method,
+    body: body
+    }));
 }
