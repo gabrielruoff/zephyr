@@ -37,7 +37,11 @@ class accounts:
 
     def getselectedticker(self, username, body):
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            st = ledger.getselectedticker(ledger.get_user_id_username(username=username))
+            try:
+                uid = body['uid']
+            except KeyError as e:
+                uid = ledger.get_user_id_username(username=username)
+            st = ledger.getselectedticker()
             return build_api_response(True, data=st, wrapper='selectedticker')
 
 
@@ -58,20 +62,12 @@ class transactions:
         tx = username
         rx = body['rx']
         value = body['value']
-        pkey = body['pkey']
         logging.debug('[API] attempting transaction {} -> {} ({})'.format(tx, rx, str(value)))
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
             txuid = ledger.get_user_id_username(tx)
             rxuid = ledger.get_user_id_username(rx)
-            # verify pkey
-            logging.debug('[API] trying submitted pkey {}'.format(pkey))
-            if ledger.verify_pkey(txuid, pkey):
-                logging.debug('[API] pkey accepted, proceeding')
-                ledger.do_ledger_transaction(txuid, rxuid, value)
-                tx_id = ledger.get_latest_transaction_id(txuid)
-            else:
-                logging.debug('[API] pkey rejected, cancelling transaction')
-                return build_api_response(False, err='invalid pkey')
+            ledger.do_ledger_transaction(txuid, rxuid, value)
+            tx_id = ledger.get_latest_transaction_id(txuid)
             logging.debug('[API] transaction successful')
             return build_api_response(True, data=tx_id)
 
