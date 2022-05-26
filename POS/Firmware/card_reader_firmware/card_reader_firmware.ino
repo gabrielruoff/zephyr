@@ -1,7 +1,7 @@
 /*
- * 
- * DecentralizedDebit - Gabriel Ruoff, 2021
- * geruoff@syr.edu
+
+   DecentralizedDebit - Gabriel Ruoff, 2021
+   geruoff@syr.edu
 
    Typical pin layout used:
    -----------------------------------------------------------------------------------------
@@ -24,6 +24,9 @@
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
 MFRC522::MIFARE_Key key;
 
+/*
+   General Card layout variables
+*/
 byte block_height = 8;
 byte initial_block_height = 8;
 byte next_trailing = 11;
@@ -31,7 +34,35 @@ byte block_size = 16;
 byte blocks_per_sector = 4;
 char chars[16];
 
-bool done = false;
+/*
+   Variables related to reading card
+*/
+byte first_sector = 2;
+byte first_block = 8; byte root_block = first_block;
+byte top_block = 63;
+int dataindex;
+
+/*
+   Vars related to writing card
+*/
+int i = 0;
+int recv = 0;
+int remaining = 0;
+
+/*
+   Deliminators
+*/
+char deliminator = '!';
+char terminator = '!';
+
+bool terminated = false;
+
+MFRC522::StatusCode status;
+byte buffer[18];
+byte size = sizeof(buffer);
+
+// char array of read data
+byte data[18];
 
 void setup() {
 
@@ -50,37 +81,21 @@ void setup() {
 
 void loop() {
 
-  if (Serial.available() >= 1 && !done) {
-
-    // Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
-    if ( ! mfrc522.PICC_IsNewCardPresent())
-      return;
-
-    // Select one of the cards
-    if ( ! mfrc522.PICC_ReadCardSerial())
-      return;
-
-    MFRC522::PICC_Type piccType = mfrc522.PICC_GetType(mfrc522.uid.sak);
-    //  Serial.println(mfrc522.PICC_GetTypeName(piccType));
-
-    // Check for compatibility
-    if (    piccType != MFRC522::PICC_TYPE_MIFARE_MINI
-            &&  piccType != MFRC522::PICC_TYPE_MIFARE_1K
-            &&  piccType != MFRC522::PICC_TYPE_MIFARE_4K) {
-      Serial.println(F("This sample only works with MIFARE Classic cards."));
-      return;
-    }
+  if (Serial.available() >= 1) {
 
     char c = Serial.read();
 
     if (c == 'r') {
       //      Serial.println("reading mode");
       read_wallet_address(8, key);
-      done = true;
+      waitforcardremoved();
+      //      mfrc522.PICC_HaltA();
+      //      done = true;
     } else if (c == 'w') {
       //      Serial.println("writing mode");
       write_wallet_address();
-      done = true;
+      waitforcardremoved();
+      //      done = true;
     }
 
   }
@@ -88,32 +103,16 @@ void loop() {
 }
 
 void read_wallet_address(byte starting_block, MFRC522::MIFARE_Key keyA) {
+  root_block = first_block;
+  next_trailing = 11;
 
-  // start on sector 2
-  byte first_sector = 2;
-  byte first_block = 8; byte root_block = first_block;
-  byte next_trailing = 11;
-  byte block_size = 16;
-  byte blocks_per_sector = 4;
-  byte top_block = 63;
-
-  char deliminator = '!';
-  char terminator = '!';
-
-  MFRC522::StatusCode status;
-  byte buffer[18];
-  byte size = sizeof(buffer);
-
-  // char array of read data
-  byte data[18];
+  waitforcard();
 
   // start at the first sector
-  bool terminated = false;
-  int dataindex;
   while (!terminated) {
 
     // Authenticate using key A
-    //    Serial.println(F("Authenticating using key A..."));
+//    Serial.println(F("Authenticating using key A..."));
     status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, next_trailing, &keyA, &(mfrc522.uid));
     if (status != MFRC522::STATUS_OK) {
       Serial.print(F("PCD_Authenticate() failed: "));
@@ -125,13 +124,13 @@ void read_wallet_address(byte starting_block, MFRC522::MIFARE_Key keyA) {
 
       status = (MFRC522::StatusCode) mfrc522.MIFARE_Read(i, buffer, &size);
       if (status != MFRC522::STATUS_OK) {
-        //        Serial.print(F("MIFARE_Read() failed: "));
-//        Serial.println(mfrc522.GetStatusCodeName(status));
+        Serial.print(F("MIFARE_Read() failed: "));
+        Serial.println(mfrc522.GetStatusCodeName(status));
       }
 
       // dump read data into data array
-      int correction_factor = ((root_block - first_block) / blocks_per_sector) * block_size;
       dataindex = 0;
+      int correction_factor = ((root_block - first_block) / blocks_per_sector) * block_size;
       for (int j = (i - first_block) * block_size; j < (i - first_block + 1)*block_size; j++) {
         data[dataindex] = buffer[(j - ((i - first_block) * block_size))];
         dataindex++;
@@ -155,21 +154,25 @@ void read_wallet_address(byte starting_block, MFRC522::MIFARE_Key keyA) {
     next_trailing += blocks_per_sector;
 
   }
+  mfrc522.PICC_HaltA();
+  mfrc522.PCD_StopCrypto1();
+  terminated = false;
 
 }
 
 void write_wallet_address() {
 
+  waitforcard();
 
-  int i = 0;
-  int recv = 0;
-  int remaining = 0;
+  i = 0;
+  recv = 0;
+  remaining = 0;
 
   if (Serial.available()) {
 
     // put your main code here, to run repeatedly:
     do {
-//      Serial.println("writing mode");
+      //      Serial.println("writing mode");
       //        Serial.print(recv); Serial.print(" available: "); Serial.println(Serial.available());
 
       remaining = Serial.available();
@@ -183,9 +186,9 @@ void write_wallet_address() {
     } while (recv < 336);
 
     //    remaining = Serial.available();
-//    Serial.print("remaining: ");
-//    Serial.println(remaining);
-//    Serial.readBytes(chars, 8);
+    //    Serial.print("remaining: ");
+    //    Serial.println(remaining);
+    //    Serial.readBytes(chars, 8);
     for (int i = sizeof(chars) - 8; i < sizeof(chars); i++)
       chars[i] = byte('!');
 
@@ -199,14 +202,13 @@ void write_wallet_address() {
     mfrc522.PCD_StopCrypto1();
 
   }
-
 }
 
 void write_block(MFRC522::MIFARE_Key keyA, MFRC522::MIFARE_Key keyB) {
 
   // determine how many blocks will be used
   float num_blocks = 1;
-//  Serial.println(num_blocks);
+  //  Serial.println(num_blocks);
 
   // determine how many sectors will be used
   int num_sectors = round(num_blocks / 4);
@@ -238,45 +240,45 @@ void write_block(MFRC522::MIFARE_Key keyA, MFRC522::MIFARE_Key keyB) {
   byte size = sizeof(buffer);
 
   // Authenticate using key A
-//  Serial.println(F("Authenticating using key A..."));
+  //  Serial.println(F("Authenticating using key A..."));
   status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, next_trailing, &keyA, &(mfrc522.uid));
   if (status != MFRC522::STATUS_OK) {
-//    Serial.print(F("PCD_Authenticate() failed: "));
-//    Serial.println(mfrc522.GetStatusCodeName(status));
+    //    Serial.print(F("PCD_Authenticate() failed: "));
+    //    Serial.println(mfrc522.GetStatusCodeName(status));
     return;
   }
 
   // Authenticate using key B
-//  Serial.println(F("Authenticating again using key B..."));
+  //  Serial.println(F("Authenticating again using key B..."));
   status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, next_trailing, &keyB, &(mfrc522.uid));
   if (status != MFRC522::STATUS_OK) {
-//    Serial.print(F("PCD_Authenticate() failed: "));
-//    Serial.println(mfrc522.GetStatusCodeName(status));
+    //    Serial.print(F("PCD_Authenticate() failed: "));
+    //    Serial.println(mfrc522.GetStatusCodeName(status));
     return;
   }
 
   // for each block to be written, starting with the first, write to the sector
-  
-    // if this is the next trailing block, skip it and increment next_trailing
-    // not doing so will brick the card
-    if (block_height == next_trailing) {
-      block_height++; next_trailing += 4;
-      // authenticate this next sector using key B
-      status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, next_trailing, &keyB, &(mfrc522.uid));
-      if (status != MFRC522::STATUS_OK) {
-//        Serial.print(F("PCD_Authenticate() failed: "));
-//        Serial.println(mfrc522.GetStatusCodeName(status));
-        return;
-      }
-    }
 
-    // Write chars to the block
-//    Serial.print(F("Writing chars into block ")); Serial.println(block_height);
-    status = (MFRC522::StatusCode) mfrc522.MIFARE_Write(block_height, block, block_size);
+  // if this is the next trailing block, skip it and increment next_trailing
+  // not doing so will brick the card
+  if (block_height == next_trailing) {
+    block_height++; next_trailing += 4;
+    // authenticate this next sector using key B
+    status = (MFRC522::StatusCode) mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, next_trailing, &keyB, &(mfrc522.uid));
     if (status != MFRC522::STATUS_OK) {
-//      Serial.print(F("MIFARE_Write() failed: "));
-//      Serial.println(mfrc522.GetStatusCodeName(status));
+      //        Serial.print(F("PCD_Authenticate() failed: "));
+      //        Serial.println(mfrc522.GetStatusCodeName(status));
+      return;
     }
+  }
+
+  // Write chars to the block
+  //    Serial.print(F("Writing chars into block ")); Serial.println(block_height);
+  status = (MFRC522::StatusCode) mfrc522.MIFARE_Write(block_height, block, block_size);
+  if (status != MFRC522::STATUS_OK) {
+    //      Serial.print(F("MIFARE_Write() failed: "));
+    //      Serial.println(mfrc522.GetStatusCodeName(status));
+  }
 
 
   block_height++;
@@ -290,5 +292,33 @@ void dump_byte_array(byte *buffer, byte bufferSize) {
   for (byte i = 0; i < bufferSize; i++) {
     Serial.print(buffer[i] < 0x10 ? " 0" : " ");
     Serial.print(buffer[i], HEX);
+  }
+}
+
+/*
+   Wait for a card to be placed on the reader
+*/
+void waitforcard() {
+  while (!mfrc522.PICC_IsNewCardPresent()) {
+    //    Serial.println("waiting for card");
+  }
+  mfrc522.PICC_ReadCardSerial();
+  MFRC522::PICC_Type piccType = mfrc522.PICC_GetType(mfrc522.uid.sak);
+  Serial.println(piccType);
+
+  // Check for compatibility
+  if (piccType != MFRC522::PICC_TYPE_MIFARE_MINI
+      &&  piccType != MFRC522::PICC_TYPE_MIFARE_1K
+      &&  piccType != MFRC522::PICC_TYPE_MIFARE_4K) {
+    Serial.println(F("This sample only works with MIFARE Classic cards."));
+  }
+}
+
+void waitforcardremoved() {
+  while (1) {
+    //    Serial.println("waiting for card to be removed");
+    if (!mfrc522.PICC_IsNewCardPresent() && !mfrc522.PICC_IsNewCardPresent()) {
+      return;
+    }
   }
 }
