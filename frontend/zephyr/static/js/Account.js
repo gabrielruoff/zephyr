@@ -5,6 +5,26 @@
 
   feather.replace({ 'aria-hidden': 'true' })
 
+  var datasets = [];
+  console.log(data)
+  var colors = ['#007bff', '#ff6905', '#ff171f'];
+  var i = 0;
+for(const [key, value] of Object.entries(data)) {
+  console.log(value);
+      datasets.push({
+        label: key,
+        data: value,
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: colors[i],
+        borderWidth: 4,
+        pointBackgroundColor: '#007bff'
+      })
+  i += 1;
+        };
+
+console.log(datasets);
+
   // Graphs
   var ctx = document.getElementById('balanceChart')
   // eslint-disable-next-line no-unused-vars
@@ -12,14 +32,7 @@
     type: 'line',
     data: {
       labels: labels,
-      datasets: [{
-        data: data,
-        lineTension: 0,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
-        borderWidth: 4,
-        pointBackgroundColor: '#007bff'
-      }]
+      datasets: datasets,
     },
     options: {
       scales: {
@@ -30,7 +43,7 @@
         }]
       },
       legend: {
-        display: false
+        display: true
       }
     }
   })
@@ -67,10 +80,10 @@ function set_selected_ticker(username, ticker) {
 
   oldticker = ticker
 }
-
+  var apiurl = "http://localhost:5000/Account/";
   function api_request(uid, method, body) {
   var xhr = new XMLHttpRequest();
-  apiurl + uid
+  url = apiurl + uid
   xhr.open("POST", url, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({

@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['192.168.122.176', '127.0.0.1', 'ccr-testbench']
 # Application definition
 
 INSTALLED_APPS = [
+    # 'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

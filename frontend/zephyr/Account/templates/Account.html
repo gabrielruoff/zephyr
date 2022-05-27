@@ -106,7 +106,9 @@
                             var labels = [ {% for label in transactions.balancechart.labels %}
                             '{{ label }}',
                             {% endfor %} ]
-                            var data = [ {% for data in transactions.balancechart.data %}
+                            var data = { {% for key, value in transactions.balancechart.data.items %} {{key}}: {{value}},
+                            {% endfor %} };
+                            var data2 = [ {% for data in transactions.balancechart.data2 %}
                             '{{ data }}',
                             {% endfor %} ]
                         </script>
