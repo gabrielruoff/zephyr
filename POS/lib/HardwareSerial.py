@@ -41,10 +41,12 @@ class arduino:
         buf = ""
 
         recv = self.serialport.read()
+        # print(recv)
         while recv != b'!':
             # print(buf)
             buf += recv.decode("utf-8")
             recv = self.serialport.read()
+            # print(recv)
 
         # print(buf)
         return buf
