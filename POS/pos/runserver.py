@@ -1,15 +1,19 @@
+import platform
 import subprocess
-from dotenv import load_dotenv
 import os
 
-load_dotenv('../../.env')
+certargs = []
+if platform.system() == "linux" or platform.system() == "linux2":
+    # linux
+    pass
+elif platform.system() == "Darwin":
+    # OS X
+    exe = '{}/bin/python'.format(os.environ['VIRTUAL_ENV'])
+elif platform.system() == "win32":
+    exe = '{}\\Scripts\\python.exe'.format(os.environ['VIRTUAL_ENV'])
 
-cert = os.environ.get('CERTFILE')
-key = os.environ.get('CERT_KEYFILE')
-# certargs = ['--cert-file', cert, '--key-file', key]
-startcommand = ['{}\\Scripts\\python.exe'.format(os.environ['VIRTUAL_ENV']), 'manage.py', 'runserver', '0.0.0.0:8000']#, *certargs]
+startcommand = [exe, 'manage.py', 'runserver', '127.0.0.1:8000']
 # start ganache and detach process
-print(startcommand)
 sp = subprocess.Popen(startcommand)#, start_new_session=True)
 out, err = sp.communicate()
 print(out)
