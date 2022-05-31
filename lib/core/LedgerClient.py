@@ -135,7 +135,7 @@ class LedgerClient:
             assets = self.getsupportedtickers()
         for a in assets:
             ai = a
-            balances[ai] = float(self._mysql_select(self._userstable, f, s, selection='{}balance'.format(a))[0][0])
+            balances[ai] = float(Decimal(self._mysql_select(self._userstable, f, s, selection='{}balance'.format(a))[0][0]).normalize())
         return balances
 
     def getsupportedtickers(self):
