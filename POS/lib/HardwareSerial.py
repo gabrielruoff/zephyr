@@ -32,7 +32,7 @@ class arduino:
                 # print(i)
                 time.sleep(0.17)
                 i = 0
-        print('sent:', j, 'byte(s)')
+        # print('sent:', j, 'byte(s)')
 
         self.serialport.flush()
 

@@ -22,6 +22,7 @@ class POS:
             'RSA_PUB_SUFFIX')
         self.arduinoport = 'COM3'
 
+
     def __call__(self, **kwargs):
         self.update(kwargs)
 
@@ -83,10 +84,11 @@ class POS:
         uid = self.readuidfromcard()
         selectedticker = getselectedticker(uid)
         priceusd = float(getpriceusd(selectedticker))
-        confirm = input(
-            'confirm transaction ${:,} ({} {}) [y/n] '.format(float(priceusd * value), str(value), selectedticker))
-        if confirm.upper() == 'Y':
-            return '\ntransaction successful (txid = {})'.format(dotransaction(uid, *self.identity.values(), value))
+        # confirm = input(
+        #     'confirm transaction ${:,} ({} {}) [y/n] '.format(float(priceusd * value), str(value), selectedticker))
+        # if confirm.upper() == 'Y':
+        #     return '\ntransaction successful (txid = {})'.format(dotransaction(uid, *self.identity.values(), value))
+        return dotransaction(uid, *self.identity.values(), value)
 
 
 def post(url, method, body, headers=None):

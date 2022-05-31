@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api, Resource, request
 from flask_cors import CORS
+import os
 
 from api_ref import *
 
@@ -50,4 +51,5 @@ api.add_resource(Accounts, '/Account/<username>')
 api.add_resource(Transactions, '/Transactions/<username>')
 
 if __name__ == '__main__':
+    ssl_context = (os.environ.get('CERTFILE'), os.environ.get('CERT_KEYFILE'))
     app.run(host='0.0.0.0', debug=True)

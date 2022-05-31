@@ -18,9 +18,9 @@
 <body class="h-100">
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand me-0 px-3" , href="/"> <img src="{% static 'img/zephyr-text-logo-white.png' %}"
-                                                       alt="Zephyr-logo"
-                                                       , style="width: 200px; height: auto"> </a>
+    <a class="navbar-brand me-0 px-3" , href="/"> <img src="{% static 'img/zephyr-pos-text-logo-white.png' %}"
+                                                       alt="Zephyr-pos-logo"
+                                                       , style="width: 300px; height: auto"> </a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -35,25 +35,25 @@
 
 <div class="container d-flex justify-content-center align-self-center h-100 w-100 text-center" style="">
     <div class="col-lg-8 col-lg-offset-8 shadow-lg p-3 mb-5 m-5 bg-light rounded-3 h-100">
-        <form>
+        <form id="transactionform">
             <div class="form-group justify-content-center align-self-center h-100 m-5">
                 <h1 class="m-5">Process A Transaction</h1>
-                <input type="number" class="form-control m-3" id="inputtransactionvalue"
+                <input type="number" class="form-control m-3" id="transactionValue"
                        aria-describedby="transactionValue"
                        placeholder="Enter Transaction value in USD">
-                <small id="transactionValue" class="form-text text-muted">Enter the value of the customer's total
+                <small class="form-text text-muted">Enter the value of the customer's total
                     transaction in USD, formatted to two decimal places.</small>
             </div>
             <button type="submit" class="btn btn-primary mb-5"
-                    onclick="dopretransaction({{ user.uid }}, '{{ user.selectedticker }}')">Submit
+                    onclick="dopretransaction({{ user.uid }})">Submit
             </button>
         </form>
-        <div class="alert alert-info alert-dismissible fade show visually-hidden">
-            <strong id="promptforcard">Info!</strong> Please read the comments carefully.
+        <div class="alert alert-info alert-dismissible fade show visually-hidden" id="promptforcard">
+            <strong>Card Reader Ready</strong> <br> Please tap your zephyrcard on the card reader.
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
-        <div class="alert alert-info alert-dismissible fade show visually-hidden">
-            <strong id="confirmationprompt">Info!</strong> Please read the comments carefully.
+        <div class="alert alert-info alert-dismissible fade show visually-hidden" id="confirmationprompt">
+            <strong>Confirm Transaction: </strong> Please read the comments carefully.
         </div>
     </div>
 </div>

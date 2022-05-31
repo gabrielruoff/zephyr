@@ -304,7 +304,7 @@ void waitforcard() {
   }
   mfrc522.PICC_ReadCardSerial();
   MFRC522::PICC_Type piccType = mfrc522.PICC_GetType(mfrc522.uid.sak);
-  Serial.println(piccType);
+//  Serial.println(piccType);
 
   // Check for compatibility
   if (piccType != MFRC522::PICC_TYPE_MIFARE_MINI
