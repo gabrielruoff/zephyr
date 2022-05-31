@@ -35,7 +35,7 @@ class pos:
     def insertreaderdata(self, uid, body):
         with sqlite3.connect('pos.db') as conn:
             cur = conn.cursor()
-            cur.execute("INSERT INTO pos (read) VALUES(?)",(body['read']))
+            cur.execute("UPDATE pos SET read=? where true", (uid))
         return build_api_response(True)
 
     def retrievereaderdata(self, uid, body):
