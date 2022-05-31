@@ -85,6 +85,8 @@
                 </ul>
             </div>
         </nav>
+    </div>
+</div>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -92,13 +94,18 @@
             </div>
 
             <div class="container">
-                <div class="row" style="width: fit-content">
+                <div class="row mt-4" style="width: fit-content">
                         <h1 style="font-weight: bold; text-align: left"> Welcome, {{ user.username }}</h1>
                 </div>
                 <div class="row row justify-content-center align-self-center h-100">
                     <div class="col-sm row justify-content-center align-self-center h-100">
-                        <div class="row justify-content-center align-self-center h-100">
-                            <h1 style="font-weight: bold; text-align: center; font-size: 60px"> ${{ assets.fiat.balance|floatformat:"2g" }} </h1>
+                        <div class="row justify-content-center align-self-center h-100 shadow-lg bg-light p-2 border border-info rounded pt-5 pb-5">
+                            <div class="col-sm-1">
+                                <h1 style="font-weight: bold; color: #67daf8; text-align: left; font-size: 35px"> Your Balance </h1>
+                            </div>
+                            <div class="col-lg">
+                            <h1 style="font-weight: bold; text-align: right; font-size: 50px; margin-right: 70px"> ${{ assets.fiat.balance|floatformat:"2g" }} </h1>
+                        </div>
                         </div>
                     </div>
                     <div class="col-sm">
@@ -112,13 +119,13 @@
                             '{{ data }}',
                             {% endfor %} ]
                         </script>
-                        <canvas class="my-4 w-100" id="balanceChart" width=auto height=auto></canvas>
+                        <canvas class="my-4 w-100 shadow-lg bg-light p-3 border border-info rounded" id="balanceChart" width=auto height=auto></canvas>
                     </div>
                 </div>
             </div>
 
-            <div class="container">
-                <h1> My Wallets </h1>
+            <div class="container mt-5">
+                <h1 class="mb-4"> My Wallets </h1>
                 <div class="row">
                     {% for ticker in assets.crypto.tickers %}
                     <div
@@ -133,7 +140,7 @@
                         <div class="container" style="height: 25px"></div>
                         <div class="row">
                             {% with assets.crypto.prices|lookup:ticker|floatformat as cryptoprice %}
-                        <h2 style="text-align: center; text-transform: uppercase"> {{ assets.crypto.balances|lookup:ticker }} {{ ticker }} <br>
+                        <h2 style="text-align: center; text-transform: uppercase"> {{ assets.crypto.balances|lookup:ticker|floatformat:"6g" }} {{ ticker }} <br>
                             (${{ assets.crypto.balances|lookup:ticker|multiply:cryptoprice|floatformat:"2g" }})</h2>
                         <p style="text-align: center; font-size: 17px; text-transform: uppercase"> {{ ticker }} &#8776; ${{ cryptoprice|floatformat:"2g" }} </p>
                             {% endwith %}
@@ -154,7 +161,8 @@
                 </div>
             </div>
 
-            <h2> {{ transactions.table.title }}</h2>
+            <div class="container mt-5">
+            <h2 class="mb-4"> {{ transactions.table.title }}</h2>
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
@@ -175,9 +183,8 @@
                     </tbody>
                 </table>
             </div>
+            </div>
         </main>
-    </div>
-</div>
 
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>

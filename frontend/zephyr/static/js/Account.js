@@ -7,25 +7,31 @@
 
   var datasets = [];
   console.log(data)
-  var colors = ['#007bff', '#ff6905', '#ff171f'];
+  var colors = ['#7eafec', '#f39564', '#b278f8'];
   var i = 0;
 for(const [key, value] of Object.entries(data)) {
-  console.log(value);
       datasets.push({
-        label: key,
+        label: key.toUpperCase(),
         data: value,
         lineTension: 0,
-        backgroundColor: 'transparent',
+        // backgroundColor: [
+        //         colors[i]
+        //     ],
         borderColor: colors[i],
         borderWidth: 4,
-        pointBackgroundColor: '#007bff'
+        pointBackgroundColor: colors[i],
+          pointStyle: 'rect',
       })
-  i += 1;
+  i++;
         };
 
-console.log(datasets);
 
   // Graphs
+    Chart.Legend.prototype.afterFit = function() {
+    this.height = this.height + 20;
+    this.padding = this.padding + 100;
+};
+    Chart.defaults.global.legend.labels.usePointStyle = true;
   var ctx = document.getElementById('balanceChart')
   // eslint-disable-next-line no-unused-vars
   var balanceChart = new Chart(ctx, {
@@ -35,6 +41,8 @@ console.log(datasets);
       datasets: datasets,
     },
     options: {
+        plugins: {
+        },
       scales: {
         yAxes: [{
           ticks: {
@@ -42,8 +50,22 @@ console.log(datasets);
           }
         }]
       },
+        title: {
+            display: true,
+            text: 'Wallets Over Time (%)'
+        },
       legend: {
-        display: true
+          display: true,
+          position: 'top',
+          align: 'start',
+          maxwidth: 200,
+            labels: {
+                fontColor: '#333',
+                font: {
+                        size: 100,
+                    style: 'bold',
+                    },
+            }
       }
     }
   })
@@ -80,7 +102,7 @@ function set_selected_ticker(username, ticker) {
 
   oldticker = ticker
 }
-  var apiurl = "http://localhost:5000/Account/";
+  var apiurl = "https://ccr-testbench:5000/Account/";
   function api_request(uid, method, body) {
   var xhr = new XMLHttpRequest();
   url = apiurl + uid

@@ -13,7 +13,7 @@ default_http_headers = {'Content-type': 'application/json', 'Accept': 'text/plai
 
 
 def index(request, username):
-    API_URL = 'http://localhost:5000/{}/{}'
+    API_URL = 'https://localhost:5000/{}/{}'
     template = loader.get_template('Account.html')
 
     method = 'getselectedticker'
@@ -30,6 +30,7 @@ def index(request, username):
         'asset': '*'
     }
     balances = post(API_URL.format('Account', username), method, body)['data']['balance']
+    print(balances)
 
     #  get transactions
     method = 'listtransactions'
@@ -44,7 +45,7 @@ def index(request, username):
             'headers':
                 ['Transaction ID', 'Merchant', 'Asset', 'Value', 'New Balance', 'Timestamp'],
             'transactions':
-                post(API_URL.format('Transactions', username), method, body)['data']['transactions']
+                reversed(post(API_URL.format('Transactions', username), method, body)['data']['transactions'])
         }
     }
     body['format'] = False
@@ -55,7 +56,7 @@ def index(request, username):
     end = txtimestamps[-1]
     # print(post('http://localhost:5000/Transactions/{}'.format(username), method, body)['data']['transactions'])
     sortedtransactions = sorttransactionsbyticker(unformattedtransactions)
-    print(sortedtransactions)
+    # print(sortedtransactions)
 
     txtimestamps = [{ticker: [datetime.datetime.strptime(tx[-1], "%m/%d/%Y, %I:%M%p") for tx in sortedtransactions[ticker]] for ticker in sortedtransactions}][0]
     # print(txtimestamps)
@@ -63,24 +64,32 @@ def index(request, username):
     labels = [str(d.strftime('%m/%d')) for d in pandas.date_range(start, end, freq='d').union([end])]
 
     txtimestamps = [{ticker: [txts.strftime('%m/%d') for txts in txtimestamps[ticker]] for ticker in txtimestamps}][0]
-    print(txtimestamps)
+    # print(txtimestamps)
     data = [{ticker: [0] * len(labels) for ticker in sortedtransactions}][0]
     # print(data)
     _balance = 0
+    maxd = {}
     # print(labels, txtimestamps)
     for ticker in sortedtransactions:
-        print(ticker+':')
+        maxd[ticker] = 0
+        # print(ticker+':')
         for i, label in enumerate(labels):
-            print(i, label,':')
-            print(txtimestamps[ticker])
+            # print(i, label,':')
+            # print(txtimestamps[ticker])
             if label in txtimestamps[ticker]:
                 j = max(loc for loc, val in enumerate(txtimestamps[ticker]) if val == label)
-                print(True, j)
+                # print(True, j)
                 _balance = sortedtransactions[ticker][j][4]
+                # print(float(_balance), float(maxd[ticker]))
+                if float(_balance) > float(maxd[ticker]):
+                    maxd[ticker] = float(_balance)
             data[ticker][i] = float(_balance)
         _balance = 0
 
-    print(labels, data)
+    for ticker in sortedtransactions:
+        data[ticker] = [100*d/maxd[ticker] for d in data[ticker]]
+
+    # print(labels, data)
     # crypto prices
     method = 'getsupportedtickers'
     tickers = post(API_URL.format('Transactions', username), method, {})['data']['tickers']
@@ -123,7 +132,7 @@ def post(url, method, body, headers=None):
     if headers is None:
         headers = default_http_headers
     data = {'method': method, 'body': body}
-    return requests.post(url, data=json.dumps(data), headers=headers).json()
+    return requests.post(url, data=json.dumps(data), headers=headers, verify=False).json()
 
 def sorttransactionsbyticker(transactions):
     tx = {}
