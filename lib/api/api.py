@@ -9,6 +9,7 @@ from api_ref import *
 app = Flask(__name__)
 api = Api(app)
 cors = CORS(app, resources={r"/Account/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/Transactions/*": {"origins": "*"}})
 
 
 # manage Accounts
