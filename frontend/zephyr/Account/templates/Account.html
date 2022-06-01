@@ -115,9 +115,6 @@
                             {% endfor %} ]
                             var data = { {% for key, value in transactions.balancechart.data.items %} {{key}}: {{value}},
                             {% endfor %} };
-                            var data2 = [ {% for data in transactions.balancechart.data2 %}
-                            '{{ data }}',
-                            {% endfor %} ]
                         </script>
                         <canvas class="my-4 w-100 shadow-lg bg-light p-3 border border-info rounded" id="balanceChart" width=auto height=auto></canvas>
                     </div>

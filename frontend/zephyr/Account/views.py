@@ -102,7 +102,6 @@ def index(request, username):
     transactions['balancechart'] = {
         'labels': labels,
         'data': data,
-        # 'data2': data2,
     }
 
     assets = {
