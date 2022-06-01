@@ -25414,3 +25414,1331 @@ DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/pri
 INFO:werkzeug:127.0.0.1 - - [31/May/2022 18:33:07] "POST /Transactions/User1 HTTP/1.1" 200 -
 DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 197
 WARNING:django.request:Not Found: /favicon.ico
+INFO:werkzeug: * Detected change in '/home/common/dev/POS/pos/pos/settings.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+INFO:werkzeug: * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.122.176:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 20:02:19] "[31m[1mGET /Account/2 HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 20:02:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 20:02:31] "[33mGET / HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 20:02:49] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 92
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] retrieving * balance for User1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:[API] found * balance {'bnb': 8.860000000000001, 'btc': 0.8800000000000008, 'eth': 3.999999999999999, 'fiat': 38452.82} for User1
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 20:02:50] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 235
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 20:02:50] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 18237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 20:02:50] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 18237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 20:02:50] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 20:02:51] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 197
+WARNING:django.request:Not Found: /favicon.ico
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 20:03:02] "[31m[1mGET /Account/2 HTTP/1.1[0m" 405 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 20:03:35] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 20:03:48] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:31:41] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:38:57] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:39:17] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:41:32] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:43:02] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:43:44] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:44:13] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:44:30] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:49:05] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:50:16] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:51:09] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:53:47] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 21:58:44] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:01:31] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:04:04] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:05:06] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:06:19] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:07:45] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:10:38] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:11:31] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:13:05] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:14:24] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:14:41] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:14:41] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:15:28] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:15:40] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:15:40] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:16:36] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:16:54] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:16:59] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:16:59] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:17:41] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:17:56] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:18:37] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:18:37] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:18:49] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:18:51] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:19:07] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:20:20] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:20:20] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:20:47] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:21:02] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:21:02] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:21:51] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:21:51] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:22:00] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:22:08] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:22:08] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:23:17] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:23:28] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:23:28] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:24:12] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:24:34] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:24:34] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:25:12] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:25:27] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:25:27] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:26:12] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:27:15] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:27:23] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:27:23] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:28:25] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:29:14] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:29:58] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:30:16] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:30:28] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:30:56] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:30:58] "POST /Account/2 HTTP/1.1" 200 -
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: 'gabrielruoff.work'. You may need to add 'gabrielruoff.work' to ALLOWED_HOSTS.
+WARNING:django.request:Bad Request: /
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:32:23] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:32:40] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:32:47] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:33:16] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:33:32] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:33:46] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:35:39] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:36:03] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:36:24] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:36:29] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:36:36] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:36:53] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:36:56] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:37:04] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:37:04] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:40:02] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:40:27] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:40:27] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:42:03] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:42:48] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:42:48] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:44:37] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:45:12] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:45:12] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:45:26] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:45:30] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:45:30] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:46:14] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 22:47:29] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 92
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] retrieving * balance for User1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:[API] found * balance {'bnb': 8.860000000000001, 'btc': 0.8800000000000008, 'eth': 3.999999999999999, 'fiat': 38659.15} for User1
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 22:47:30] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 235
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 22:47:30] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 18237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 22:47:30] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 18237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 22:47:30] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+INFO:werkzeug:127.0.0.1 - - [31/May/2022 22:47:31] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 197
+WARNING:django.request:Not Found: /
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:48:00] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:48:00] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:49:08] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:50:18] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:50:34] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:50:34] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:51:36] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:53:22] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:53:22] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:53:33] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:53:38] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:53:38] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:54:18] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:54:24] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 22:54:24] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:01] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:06] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:06] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:12] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:22] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:22] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:39] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:51] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:34:51] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:38:59] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:39:05] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:39:05] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:39:40] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:39:48] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:39:49] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:41:13] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:42:12] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:42:40] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:42:45] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:42:59] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:43:26] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:43:32] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:44:20] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:44:48] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:44:50] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:46:09] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:46:33] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:46:52] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:46:59] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:47:10] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:47:16] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:47:26] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:48:55] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:49:03] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:49:15] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:49:33] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:49:40] "POST /Account/2 HTTP/1.1" 200 -
+WARNING:django.request:Not Found: /
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:58:43] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:58:54] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:58:54] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:59:28] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:59:42] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:59:51] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [31/May/2022 23:59:51] "POST /Account/1 HTTP/1.1" 200 -
+WARNING:django.request:Not Found: /
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:04:01] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:04:14] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:04:14] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:05:29] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:06:10] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:06:11] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:06:17] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:06:33] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:06:33] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:06:54] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:07:26] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:07:32] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:07:32] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:08:14] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:08:26] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:08:26] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:08:39] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:08:49] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:08:49] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:10:52] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:10:58] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:10:58] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:15:09] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:15:15] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:15:15] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:16:32] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:18:03] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:18:03] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:18:54] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:19:00] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:19:00] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:20:09] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:20:15] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:20:15] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:20:49] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:20:55] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:20:55] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:21:05] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:21:39] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:21:39] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:23:21] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:23:36] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:23:36] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:25:20] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:25:27] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:25:27] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:26:19] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:26:33] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:26:33] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:27:29] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:27:56] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:28:05] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:28:13] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:28:40] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:28:48] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:28:55] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:29:12] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:29:27] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:29:31] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:29:43] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:29:46] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:30:02] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:30:37] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:30:43] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:31:17] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:31:34] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:31:44] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:31:47] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:31:57] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:33:04] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:33:31] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:33:38] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:33:48] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:34:35] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:34:52] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:35:06] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:35:21] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:35:38] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:35:38] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:35:43] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:35:43] "[35m[1mPOST /Account/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/home/common/dev/lib/api/api_ref.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:40:53] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:41:12] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:41:24] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:41:24] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:41:26] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/common/dev/lib/api/api_ref.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 00:43:21] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 92
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] retrieving * balance for User1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:[API] found * balance {'bnb': 8.860000000000001, 'btc': 0.8800000000000008, 'eth': 3.999999999999999, 'fiat': 38798.05} for User1
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 00:43:25] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 235
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 00:43:25] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 18237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 00:43:25] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 18237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 00:43:25] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 00:43:26] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 197
+INFO:werkzeug: * Detected change in '/home/common/dev/lib/api/api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:43:55] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:44:06] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:44:06] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:44:13] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting transaction 1 -> 2 (534534)
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:44:13] "[35m[1mPOST /Transactions/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:44:25] "[31m[1mGET /Transactions/1 HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Detected change in '/home/common/dev/lib/api/api_ref.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+INFO:werkzeug: * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on https://127.0.0.1:5000
+ * Running on https://192.168.122.176:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 629-842-919
+DEBUG:root:Importing dependencies
+DEBUG:rlp.codec:Consider installing rusty-rlp to improve pyrlp performance with a rust based backend
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:46:14] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:46:32] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:46:41] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:46:41] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:46:44] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (54645654)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to -54645650.0
+DEBUG:root:Change balance succeeded (1 -> -54645650.0)
+DEBUG:root:Changing balance for 2 to 55645676.535
+DEBUG:root:Change balance succeeded (2 -> 55645676.535)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:46:46] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:50:35] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:51:59] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:52:10] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:52:10] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:52:15] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (3.3681604306642834)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 12.331839569335717
+DEBUG:root:Change balance succeeded (1 -> 12.331839569335717)
+DEBUG:root:Changing balance for 2 to 55645679.90316043
+DEBUG:root:Change balance succeeded (2 -> 55645679.90316043)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:52:23] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:53:00] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:53:30] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:53:38] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:53:38] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:53:45] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.00770641636226322)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 12.324133152973454
+DEBUG:root:Change balance succeeded (1 -> 12.324133152973454)
+DEBUG:root:Changing balance for 2 to 55645679.91086685
+DEBUG:root:Change balance succeeded (2 -> 55645679.91086685)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 00:53:48] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:02:21] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:02:31] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:02:31] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:02:33] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (2.3877780228008185)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.936355130172636
+DEBUG:root:Change balance succeeded (1 -> 9.936355130172636)
+DEBUG:root:Changing balance for 2 to 55645682.29864487
+DEBUG:root:Change balance succeeded (2 -> 55645682.29864487)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:02:34] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:14:43] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:14:48] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:14:48] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:14:51] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.028698227884428138)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.907656902288208
+DEBUG:root:Change balance succeeded (1 -> 9.907656902288208)
+DEBUG:root:Changing balance for 2 to 55645682.3273431
+DEBUG:root:Change balance succeeded (2 -> 55645682.3273431)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:14:58] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:15:43] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:15:51] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:15:52] "POST /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:15:56] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:16:05] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:16:05] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:16:07] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.028692199308313054)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.878964702979895
+DEBUG:root:Change balance succeeded (1 -> 9.878964702979895)
+DEBUG:root:Changing balance for 2 to 55645682.3560353
+DEBUG:root:Change balance succeeded (2 -> 55645682.3560353)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:16:09] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:18:32] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:18:37] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:18:37] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:18:39] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.0025625912923147886)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.87640211168758
+DEBUG:root:Change balance succeeded (1 -> 9.87640211168758)
+DEBUG:root:Changing balance for 2 to 55645682.35859789
+DEBUG:root:Change balance succeeded (2 -> 55645682.35859789)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:18:43] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:18:46] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:06] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:06] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:07] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.0005122425980944575)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.875889869089486
+DEBUG:root:Change balance succeeded (1 -> 9.875889869089486)
+DEBUG:root:Changing balance for 2 to 55645682.35911013
+DEBUG:root:Change balance succeeded (2 -> 55645682.35911013)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:10] "POST /Transactions/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:26] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:26] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:28] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.0005123502016098043)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.875377518887875
+DEBUG:root:Change balance succeeded (1 -> 9.875377518887875)
+DEBUG:root:Changing balance for 2 to 55645682.35962248
+DEBUG:root:Change balance succeeded (2 -> 55645682.35962248)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:30] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:47] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:54] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:54] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:55] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.0030747155888080353)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.872302803299068
+DEBUG:root:Change balance succeeded (1 -> 9.872302803299068)
+DEBUG:root:Changing balance for 2 to 55645682.36269719
+DEBUG:root:Change balance succeeded (2 -> 55645682.36269719)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:19:58] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:20:22] "POST /Account/2 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:23:18] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:23:32] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:23:32] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:23:42] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting eth transaction 1 -> 2 (0.00514678634660518)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 9.867156016952462
+DEBUG:root:Change balance succeeded (1 -> 9.867156016952462)
+DEBUG:root:Changing balance for 2 to 55645682.36784398
+DEBUG:root:Change balance succeeded (2 -> 55645682.36784398)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:23:44] "POST /Transactions/1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:23:57] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 92
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] retrieving * balance for User1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:[API] found * balance {'bnb': 8.860000000000001, 'btc': 0.8800000000000008, 'eth': 9.867156016952462, 'fiat': 50048.96} for User1
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:23:58] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 235
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:23:58] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 20237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:23:58] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 20237
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:23:58] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:23:59] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 197
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:24:28] "OPTIONS /Account/User1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:24:28] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:24:31] "POST /Account/2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:24:37] "OPTIONS /Account/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:24:37] "POST /Account/1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:24:42] "OPTIONS /Transactions/1 HTTP/1.1" 200 -
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting bnb transaction 1 -> 2 (0.006213109661385524)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:Changing balance for 1 to 8.853786890338617
+DEBUG:root:Change balance succeeded (1 -> 8.853786890338617)
+DEBUG:root:Changing balance for 2 to 999985.6602131093
+DEBUG:root:Change balance succeeded (2 -> 999985.6602131093)
+DEBUG:root:[API] transaction successful
+INFO:werkzeug:192.168.122.176 - - [01/Jun/2022 01:24:43] "POST /Transactions/1 HTTP/1.1" 200 -
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:24:46] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 92
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] retrieving * balance for User1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+DEBUG:root:[API] found * balance {'bnb': 8.853786890338617, 'btc': 0.8800000000000008, 'eth': 9.867156016952462, 'fiat': 50079.32} for User1
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:24:47] "POST /Account/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Account/User1 HTTP/1.1" 200 235
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:24:47] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 20437
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:root:[API] attempting to retrieve 0 transactions for user 'User1'
+DEBUG:root:[API] pkey omitted
+DEBUG:root:[API] request orign is local, proceeding
+DEBUG:root:[API] retrieving transactions
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:24:47] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 20437
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:24:47] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): localhost:5000
+DEBUG:root:Importing dependencies
+DEBUG:root:Importing dependencies
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BNBUSDT HTTP/1.1" 200 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.binance.com:443
+DEBUG:urllib3.connectionpool:https://api.binance.com:443 "GET /api/v3/ticker/price?symbol=ETHUSDT HTTP/1.1" 200 44
+INFO:werkzeug:127.0.0.1 - - [01/Jun/2022 01:24:48] "POST /Transactions/User1 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://localhost:5000 "POST /Transactions/User1 HTTP/1.1" 200 197
+WARNING:django.request:Not Found: /editBlackAndWhiteList
+WARNING:django.request:Not Found: /editBlackAndWhiteList
+WARNING:django.request:Not Found: /editBlackAndWhiteList
+WARNING:django.request:Not Found: /

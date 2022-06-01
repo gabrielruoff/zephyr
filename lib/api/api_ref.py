@@ -60,25 +60,20 @@ class transactions:
 
     # tx and rx are in username format
     def dotransaction(self, username, body):
-        tx = username
-        rx = body['rx']
+        rxuid = body['rx']
         value = body['value']
-        pkey = body['pkey']
-        logging.debug('[API] attempting transaction {} -> {} ({})'.format(tx, rx, str(value)))
+        # pkey = body['pkey']
         with self.initexithandler.core['LedgerClient'].LedgerClient() as ledger:
-            txuid = ledger.get_user_id_username(tx)
-            rxuid = ledger.get_user_id_username(rx)
-            # verify pkey
-            logging.debug('[API] trying submitted pkey {}'.format(pkey))
-            if ledger.verify_pkey(txuid, pkey):
-                logging.debug('[API] pkey accepted, proceeding')
-                ledger.do_ledger_transaction(txuid, rxuid, value)
-                tx_id = ledger.get_latest_transaction_id(txuid)
-            else:
-                logging.debug('[API] pkey rejected, cancelling transaction')
-                return build_api_response(False, err='invalid pkey')
+            try:
+                txuid = body['txuserid']
+            except KeyError as e:
+                txuid = ledger.get_user_id_username(username=username)
+            asset = ledger.getselectedticker(txuid)
+            logging.debug('[API] attempting {} transaction {} -> {} ({})'.format(asset, txuid, rxuid, str(value)))
+            ledger.do_ledger_transaction(txuid, rxuid, asset, value)
+            tx_id = ledger.get_latest_transaction_id(txuid)
             logging.debug('[API] transaction successful')
-            return build_api_response(True, data=tx_id)
+            return build_api_response(True, data=tx_id, wrapper='tx_id')
 
     def listtransactions(self, username, body):
         n = body['n']
