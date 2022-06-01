@@ -136,9 +136,13 @@ void read_wallet_address(byte starting_block, MFRC522::MIFARE_Key keyA) {
         dataindex++;
       }
 
-      // print each character to serial
+            // print each character to serial
       for (int i = 0; i < dataindex; i++) {
         Serial.print(char(data[i]));
+        if (data[i] == byte(terminator)) {
+//          Serial.println("breaking");
+          break;
+        }
         //        Serial.print(" ");
       }
 

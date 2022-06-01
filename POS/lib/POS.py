@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import os
 import time
 
-load_dotenv('../.env')
+load_dotenv('../../.env')
 _winroot = 'C:/Users/GEruo/Documents/GitHub/zephyr/'
 API_URL = 'http://CCR-TESTBENCH:5000/{}/{}'
 default_http_headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}

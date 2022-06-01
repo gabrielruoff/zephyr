@@ -7,7 +7,7 @@ from api_ref import *
 app = Flask(__name__)
 api = Api(app)
 cors = CORS(app, resources={r"/pos/*": {"origins": "*"}})
-cors = CORS(app, resources={r"/data/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/data": {"origins": "*"}})
 
 
 class POS(Resource):
@@ -25,6 +25,7 @@ class POS(Resource):
             print('calling method ', end='\t')
             print(func)
             return func(uid, body)
+
 
 # manage Accounts
 class Data(Resource):

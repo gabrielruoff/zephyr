@@ -11,7 +11,7 @@ default_http_headers = {'Content-type': 'application/json', 'Accept': 'text/plai
 
 
 def Dashboard(request, rxuid):
-    API_URL = 'http://CCR-TESTBENCH:5000/{}/{}'
+    API_URL = 'https://CCR-TESTBENCH:5000/{}/{}'
     template = loader.get_template('Dashboard.html')
 
     method = 'getselectedticker'
@@ -39,4 +39,4 @@ def post(url, method, body, headers=None):
     if headers is None:
         headers = default_http_headers
     data = {'method': method, 'body': body}
-    return requests.post(url, data=json.dumps(data), headers=headers).json()
+    return requests.post(url, data=json.dumps(data), headers=headers, verify=False).json()
