@@ -42,10 +42,13 @@ class pos:
         with sqlite3.connect('pos.db') as conn:
             cur = conn.cursor()
             cur.execute("select read from pos")
-            return build_api_response(True, data=cur.fetchall())
+            data = cur.fetchall()[0][0]
+            cur.close()
+            self.clearreaderdata(uid, body)
+            return build_api_response(True, data=data, wrapper='read')
 
     def clearreaderdata(self, uid, body):
-        self.insertreaderdata(None, {'read': ''})
+        self.insertreaderdata('0', None)
         return build_api_response(True)
 
 

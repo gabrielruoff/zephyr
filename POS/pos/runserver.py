@@ -9,7 +9,7 @@ if platform.system() == "linux" or platform.system() == "linux2":
 elif platform.system() == "Darwin":
     # OS X
     exe = '{}/bin/python'.format(os.environ['VIRTUAL_ENV'])
-elif platform.system() == "win32":
+elif platform.system() == "win32" or platform.system() == "Windows":
     exe = '{}\\Scripts\\python.exe'.format(os.environ['VIRTUAL_ENV'])
 
 startcommand = [exe, 'manage.py', 'runserver', '127.0.0.1:8000']
