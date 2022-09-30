@@ -19,3 +19,6 @@ https://user-images.githubusercontent.com/28720154/193166789-424bcd17-e4c2-46b7-
 
 PoS GUI:
 <img width="1323" alt="image" src="https://user-images.githubusercontent.com/28720154/193166579-f71db018-459e-49de-9e47-42beb34b3e3f.png">
+
+Video Demo:
+https://youtu.be/JDqdD5lQr6M
